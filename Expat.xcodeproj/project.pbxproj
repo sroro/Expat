@@ -8,35 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		4D04677D2843F67800DFBEA4 /* CityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D04677C2843F67800DFBEA4 /* CityTableViewController.swift */; };
-		4D0467812844DE9F00DFBEA4 /* Thailande.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0467802844DE9F00DFBEA4 /* Thailande.swift */; };
-		4D0467832844DEA500DFBEA4 /* Hongrie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0467822844DEA500DFBEA4 /* Hongrie.swift */; };
+		4D07C8DE2858AD190014BBB6 /* ListCountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D07C8DD2858AD190014BBB6 /* ListCountryData.swift */; };
+		4D07C8E02858ADA80014BBB6 /* ListCountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D07C8DF2858ADA80014BBB6 /* ListCountryService.swift */; };
+		4D10BE342873392200249CAD /* ArticleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D10BE332873392200249CAD /* ArticleData.swift */; };
+		4D10BE3828733A9000249CAD /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D10BE3728733A9000249CAD /* ArticleViewController.swift */; };
+		4D10BE3A28733C4600249CAD /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D10BE3928733C4600249CAD /* ArticleService.swift */; };
+		4D496A3D28527FC7000541AC /* CityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D496A3C28527FC7000541AC /* CityService.swift */; };
 		4D544F6F283CDEE400F9BEFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D544F6E283CDEE400F9BEFE /* AppDelegate.swift */; };
 		4D544F71283CDEE400F9BEFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D544F70283CDEE400F9BEFE /* SceneDelegate.swift */; };
 		4D544F76283CDEE400F9BEFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D544F74283CDEE400F9BEFE /* Main.storyboard */; };
 		4D544F79283CDEE400F9BEFE /* Expat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D544F77283CDEE400F9BEFE /* Expat.xcdatamodeld */; };
 		4D544F7B283CDEE400F9BEFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D544F7A283CDEE400F9BEFE /* Assets.xcassets */; };
 		4D544F7E283CDEE400F9BEFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D544F7C283CDEE400F9BEFE /* LaunchScreen.storyboard */; };
+		4D88627728647AB30035C08E /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D88627628647AB30035C08E /* WeatherService.swift */; };
 		4D928728283F7B0A00E6DD3B /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D928727283F7B0A00E6DD3B /* CityViewController.swift */; };
-		4D92872A283FB28200E6DD3B /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D928729283FB28200E6DD3B /* CityViewModel.swift */; };
-		4D92872F283FB34500E6DD3B /* CityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92872E283FB34500E6DD3B /* CityData.swift */; };
-		4D9287322842756800E6DD3B /* Dubai.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9287312842756800E6DD3B /* Dubai.swift */; };
-		4D928734284275C300E6DD3B /* Espagne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D928733284275C300E6DD3B /* Espagne.swift */; };
-		4D92873628427D0A00E6DD3B /* Bulgarie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92873528427D0A00E6DD3B /* Bulgarie.swift */; };
-		4D9287382842C0CE00E6DD3B /* CostaRica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9287372842C0CE00E6DD3B /* CostaRica.swift */; };
-		4D92873A2842C46E00E6DD3B /* Malte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9287392842C46E00E6DD3B /* Malte.swift */; };
-		4D92873C2842C7D700E6DD3B /* Panama.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92873B2842C7D700E6DD3B /* Panama.swift */; };
-		4D92873E2842CA8700E6DD3B /* Portugal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92873D2842CA8700E6DD3B /* Portugal.swift */; };
 		4DAD31FB2846417D00FA27EF /* DataCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD31FA2846417D00FA27EF /* DataCity.swift */; };
 		4DAD31FD284655D600FA27EF /* ExchangeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD31FC284655D600FA27EF /* ExchangeData.swift */; };
 		4DAD31FF284655E100FA27EF /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD31FE284655E100FA27EF /* WeatherData.swift */; };
 		4DAD32012848C8D500FA27EF /* ExchangeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD32002848C8D500FA27EF /* ExchangeService.swift */; };
-		4DAD32032849539200FA27EF /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD32022849539200FA27EF /* test.swift */; };
+		4DE778262875DE3A0073753F /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE778252875DE3A0073753F /* data.swift */; };
+		4DE778282875DEC40073753F /* appel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE778272875DEC40073753F /* appel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4D04677C2843F67800DFBEA4 /* CityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewController.swift; sourceTree = "<group>"; };
-		4D0467802844DE9F00DFBEA4 /* Thailande.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thailande.swift; sourceTree = "<group>"; };
-		4D0467822844DEA500DFBEA4 /* Hongrie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hongrie.swift; sourceTree = "<group>"; };
+		4D07C8DD2858AD190014BBB6 /* ListCountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCountryData.swift; sourceTree = "<group>"; };
+		4D07C8DF2858ADA80014BBB6 /* ListCountryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCountryService.swift; sourceTree = "<group>"; };
+		4D10BE332873392200249CAD /* ArticleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleData.swift; sourceTree = "<group>"; };
+		4D10BE3728733A9000249CAD /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		4D10BE3928733C4600249CAD /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
+		4D496A3C28527FC7000541AC /* CityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityService.swift; sourceTree = "<group>"; };
 		4D544F6B283CDEE400F9BEFE /* Expat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D544F6E283CDEE400F9BEFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D544F70283CDEE400F9BEFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,21 +46,14 @@
 		4D544F7A283CDEE400F9BEFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D544F7D283CDEE400F9BEFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D544F7F283CDEE400F9BEFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D88627628647AB30035C08E /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		4D928727283F7B0A00E6DD3B /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
-		4D928729283FB28200E6DD3B /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
-		4D92872E283FB34500E6DD3B /* CityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityData.swift; sourceTree = "<group>"; };
-		4D9287312842756800E6DD3B /* Dubai.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dubai.swift; sourceTree = "<group>"; };
-		4D928733284275C300E6DD3B /* Espagne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Espagne.swift; sourceTree = "<group>"; };
-		4D92873528427D0A00E6DD3B /* Bulgarie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bulgarie.swift; sourceTree = "<group>"; };
-		4D9287372842C0CE00E6DD3B /* CostaRica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostaRica.swift; sourceTree = "<group>"; };
-		4D9287392842C46E00E6DD3B /* Malte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Malte.swift; sourceTree = "<group>"; };
-		4D92873B2842C7D700E6DD3B /* Panama.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Panama.swift; sourceTree = "<group>"; };
-		4D92873D2842CA8700E6DD3B /* Portugal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portugal.swift; sourceTree = "<group>"; };
 		4DAD31FA2846417D00FA27EF /* DataCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCity.swift; sourceTree = "<group>"; };
 		4DAD31FC284655D600FA27EF /* ExchangeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeData.swift; sourceTree = "<group>"; };
 		4DAD31FE284655E100FA27EF /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		4DAD32002848C8D500FA27EF /* ExchangeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeService.swift; sourceTree = "<group>"; };
-		4DAD32022849539200FA27EF /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		4DE778252875DE3A0073753F /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
+		4DE778272875DEC40073753F /* appel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +67,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D0CD8C42875B6BC00ED53A5 /* Article  */ = {
+			isa = PBXGroup;
+			children = (
+				4D10BE332873392200249CAD /* ArticleData.swift */,
+				4D10BE3928733C4600249CAD /* ArticleService.swift */,
+				4DE778252875DE3A0073753F /* data.swift */,
+				4DE778272875DEC40073753F /* appel.swift */,
+			);
+			path = "Article ";
+			sourceTree = "<group>";
+		};
 		4D544F62283CDEE400F9BEFE = {
 			isa = PBXGroup;
 			children = (
@@ -94,7 +99,6 @@
 			children = (
 				4D544F88283CDF2A00F9BEFE /* Support */,
 				4D544F86283CDEFF00F9BEFE /* ViewController */,
-				4D544F87283CDF1500F9BEFE /* ViewModel */,
 				4D544F85283CDEF600F9BEFE /* Model */,
 				4D544F7F283CDEE400F9BEFE /* Info.plist */,
 				4D544F77283CDEE400F9BEFE /* Expat.xcdatamodeld */,
@@ -105,10 +109,10 @@
 		4D544F85283CDEF600F9BEFE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4D9287302842755100E6DD3B /* City */,
-				4DAD31FC284655D600FA27EF /* ExchangeData.swift */,
-				4DAD32002848C8D500FA27EF /* ExchangeService.swift */,
-				4DAD31FE284655E100FA27EF /* WeatherData.swift */,
+				4D8862752862366F0035C08E /* Weather */,
+				4D886274286236600035C08E /* Exchange */,
+				4D9287302842755100E6DD3B /* Country */,
+				4D0CD8C42875B6BC00ED53A5 /* Article  */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,18 +121,11 @@
 			isa = PBXGroup;
 			children = (
 				4D544F89283CDF4200F9BEFE /* View */,
+				4D10BE3728733A9000249CAD /* ArticleViewController.swift */,
 				4D928727283F7B0A00E6DD3B /* CityViewController.swift */,
 				4D04677C2843F67800DFBEA4 /* CityTableViewController.swift */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		4D544F87283CDF1500F9BEFE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				4D928729283FB28200E6DD3B /* CityViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		4D544F88283CDF2A00F9BEFE /* Support */ = {
@@ -146,27 +143,37 @@
 				4D544F74283CDEE400F9BEFE /* Main.storyboard */,
 				4D544F7A283CDEE400F9BEFE /* Assets.xcassets */,
 				4D544F7C283CDEE400F9BEFE /* LaunchScreen.storyboard */,
-				4DAD32022849539200FA27EF /* test.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		4D9287302842755100E6DD3B /* City */ = {
+		4D886274286236600035C08E /* Exchange */ = {
 			isa = PBXGroup;
 			children = (
-				4D92872E283FB34500E6DD3B /* CityData.swift */,
-				4DAD31FA2846417D00FA27EF /* DataCity.swift */,
-				4D92873528427D0A00E6DD3B /* Bulgarie.swift */,
-				4D9287372842C0CE00E6DD3B /* CostaRica.swift */,
-				4D9287312842756800E6DD3B /* Dubai.swift */,
-				4D928733284275C300E6DD3B /* Espagne.swift */,
-				4D9287392842C46E00E6DD3B /* Malte.swift */,
-				4D92873B2842C7D700E6DD3B /* Panama.swift */,
-				4D92873D2842CA8700E6DD3B /* Portugal.swift */,
-				4D0467802844DE9F00DFBEA4 /* Thailande.swift */,
-				4D0467822844DEA500DFBEA4 /* Hongrie.swift */,
+				4DAD32002848C8D500FA27EF /* ExchangeService.swift */,
+				4DAD31FC284655D600FA27EF /* ExchangeData.swift */,
 			);
-			path = City;
+			path = Exchange;
+			sourceTree = "<group>";
+		};
+		4D8862752862366F0035C08E /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				4DAD31FE284655E100FA27EF /* WeatherData.swift */,
+				4D88627628647AB30035C08E /* WeatherService.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		4D9287302842755100E6DD3B /* Country */ = {
+			isa = PBXGroup;
+			children = (
+				4DAD31FA2846417D00FA27EF /* DataCity.swift */,
+				4D496A3C28527FC7000541AC /* CityService.swift */,
+				4D07C8DD2858AD190014BBB6 /* ListCountryData.swift */,
+				4D07C8DF2858ADA80014BBB6 /* ListCountryService.swift */,
+			);
+			path = Country;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,27 +247,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D10BE342873392200249CAD /* ArticleData.swift in Sources */,
 				4DAD31FF284655E100FA27EF /* WeatherData.swift in Sources */,
-				4D92872F283FB34500E6DD3B /* CityData.swift in Sources */,
-				4D92873628427D0A00E6DD3B /* Bulgarie.swift in Sources */,
-				4D9287322842756800E6DD3B /* Dubai.swift in Sources */,
 				4D544F79283CDEE400F9BEFE /* Expat.xcdatamodeld in Sources */,
-				4D0467832844DEA500DFBEA4 /* Hongrie.swift in Sources */,
-				4D928734284275C300E6DD3B /* Espagne.swift in Sources */,
+				4D496A3D28527FC7000541AC /* CityService.swift in Sources */,
+				4DE778282875DEC40073753F /* appel.swift in Sources */,
+				4D10BE3A28733C4600249CAD /* ArticleService.swift in Sources */,
+				4D07C8DE2858AD190014BBB6 /* ListCountryData.swift in Sources */,
 				4DAD31FB2846417D00FA27EF /* DataCity.swift in Sources */,
-				4D92873A2842C46E00E6DD3B /* Malte.swift in Sources */,
-				4D92872A283FB28200E6DD3B /* CityViewModel.swift in Sources */,
 				4D544F6F283CDEE400F9BEFE /* AppDelegate.swift in Sources */,
+				4D10BE3828733A9000249CAD /* ArticleViewController.swift in Sources */,
 				4D544F71283CDEE400F9BEFE /* SceneDelegate.swift in Sources */,
-				4D92873C2842C7D700E6DD3B /* Panama.swift in Sources */,
-				4DAD32032849539200FA27EF /* test.swift in Sources */,
 				4D04677D2843F67800DFBEA4 /* CityTableViewController.swift in Sources */,
+				4DE778262875DE3A0073753F /* data.swift in Sources */,
+				4D88627728647AB30035C08E /* WeatherService.swift in Sources */,
 				4D928728283F7B0A00E6DD3B /* CityViewController.swift in Sources */,
 				4DAD31FD284655D600FA27EF /* ExchangeData.swift in Sources */,
 				4DAD32012848C8D500FA27EF /* ExchangeService.swift in Sources */,
-				4D0467812844DE9F00DFBEA4 /* Thailande.swift in Sources */,
-				4D9287382842C0CE00E6DD3B /* CostaRica.swift in Sources */,
-				4D92873E2842CA8700E6DD3B /* Portugal.swift in Sources */,
+				4D07C8E02858ADA80014BBB6 /* ListCountryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +419,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -443,6 +448,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

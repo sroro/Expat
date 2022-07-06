@@ -9,9 +9,10 @@ import UIKit
 
 class CityViewController: UIViewController {
     
-//    MARK: - Outlets
+    //    MARK: - Outlets
     @IBOutlet weak var cityTitle: UILabel!
     @IBOutlet weak var imageCity: UIImageView!
+    
     
     @IBOutlet weak var nameCurrency: UILabel!
     @IBOutlet weak var exchangeCurrency: UILabel!
@@ -21,7 +22,8 @@ class CityViewController: UIViewController {
     @IBOutlet weak var temperature: UILabel!
     
     
-    @IBOutlet weak var priceStudio: UIStackView!
+    
+    @IBOutlet weak var priceStudio: UILabel!
     @IBOutlet weak var priceRepas: UILabel!
     @IBOutlet weak var priceCoffee: UILabel!
     
@@ -35,18 +37,94 @@ class CityViewController: UIViewController {
     @IBOutlet weak var textTopCity: UITextView!
     
     
+    // MARK: - Properties
+    
+    var monnaie = String()
+    var infosCountry = CityService()
+    var change = ExchangeService()
+    var weather = WeatherService()
+    var city = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        textBank.text = test.textBanque
-        textTopCity.text = test.textCity
-        titleCityTxt.text = test.titletextCity
-        // Do any additional setup after loading the view.
+        
+        receiveInfosCountry()
+        getWeather()
     }
     
     
-    var test = Espagne()
-
+    // MARK: - Methods
     
-
+    
+    func receiveInfosCountry() {
+        
+        infosCountry.getCity(city: city) { [weak self] result in
+            switch result {
+            case.failure(_):
+                print("error")
+                
+            case.success(let resultOk):
+                DispatchQueue.main.async {
+                    
+                    self?.cityTitle.text = resultOk.data[0].title
+                    self?.nameCurrency.text = resultOk.data[0].currency
+                    self?.priceStudio.text = resultOk.data[0].studio
+                    self?.priceRepas.text = resultOk.data[0].repas
+                    self?.priceCoffee.text = resultOk.data[0].cafe
+                    self?.priceTransport.text = resultOk.data[0].transport
+                    self?.priceCinema.text = resultOk.data[0].cinema
+                    self?.princeEssence.text = resultOk.data[0].essence
+                    self?.textBank.text = resultOk.data[0].textBank
+                    self?.textTopCity.text = resultOk.data[0].textCity
+             
+                }
+                self!.monnaie = resultOk.data[0].devise
+                
+                // appel currency apres receiveInfo pour recevoir la devise
+                self?.currency()
+            }
+            
+        }
+    }
+    
+    
+    
+    func currency() {
+        change.getExchange(devise: monnaie ) { [weak self] resultat in
+            switch resultat {
+                
+            case.failure(_):
+                print("error")
+            case.success(let result):
+                DispatchQueue.main.async {
+                    self?.exchangeCurrency.text = ("1€ = \(result)")
+                    
+                }
+                
+            }
+        }
+    }
+    
+    
+    
+    func getWeather() {
+        
+        weather.getWeather(place: city ) { [weak self] resultat in
+            switch resultat {
+            case.failure(_):
+                print("error")
+                
+            case.success(let resultOk):
+                DispatchQueue.main.async{
+                    self?.temperature.text = "\(resultOk.main.temp) °C "
+                    self?.date.text = resultOk.weather[0].weatherDescription
+                }
+            }
+            
+        }
+    }
+    
+    
+    
+    
 }

@@ -6,9 +6,18 @@
 //
 
 import Foundation
-// MARK: - Welcome
 
-// MARK: - Aed
-struct Symbol: Decodable {
+
+// MARK: - Welcome
+import Foundation
+
+// MARK: - Welcome
+struct Exchange: Decodable {
     let rates: [String:Double]
 }
+
+// MARK: - Rates
+
+
+
+
