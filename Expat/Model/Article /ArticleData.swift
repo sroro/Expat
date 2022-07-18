@@ -5,33 +5,52 @@
 //  Created by Rodolphe Schnetzer on 04/07/2022.
 //
 
-import Foundation
 
+
+
+// This file was generated from JSON Schema using quicktype, do not modify it directly.
+// To parse the JSON, add this file to your project and do:
+//
+//   let article = try? newJSONDecoder().decode(Article.self, from: jsonData)
+
+import Foundation
 
 // MARK: - Article
 struct Article: Decodable {
-    let status: String
-    let totalResults: Int
     let articles: [ArticleElement]
 }
 
 // MARK: - ArticleElement
 struct ArticleElement: Decodable {
-    let source: Source
-    let author, title, articleDescription: String
-    let url: String
-    let urlToImage: String
-    let publishedAt: String
-    let content: String
-
+    let title: String
+    let publishedDate: String?
+    let link: String?
+    let excerpt, summary: String?
+    let media: String?
+    
     enum CodingKeys: String, CodingKey {
-        case source, author, title
-        case articleDescription = "description"
-        case url, urlToImage, publishedAt, content
-    }
+        case title
+        case publishedDate = "published_date"
+        case link
+        case excerpt, summary, media
+}
 }
 
-// MARK: - Source
-struct Source: Decodable {
-    let name: String
-}
+
+//// MARK: - ArticleElement
+//struct ArticleElement: Decodable {
+//    let title, publishedDate: String?
+//    let link: String?
+//    let excerpt, summary: String?
+//    let rank: Int?
+//    let topic, authors: String?
+//    let media: String?
+//
+//    enum CodingKeys: String, CodingKey {
+//        case title, author
+//        case publishedDate = "published_date"
+//        case link
+//        case excerpt, summary, rank, topic, authors, media
+//
+//    }
+//}

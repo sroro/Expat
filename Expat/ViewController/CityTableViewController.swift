@@ -18,9 +18,10 @@ class CityTableViewController: UITableViewController {
     // MARK: - ViewLife cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         receiveCountry()
         tableView.reloadData()
-        
+      
     }
     
     
@@ -38,7 +39,7 @@ class CityTableViewController: UITableViewController {
                     for data in resultat.data {
                         
                         self?.arrayCountry.append(data.collection)
-                        
+                    
                     }
                     self?.tableView.reloadData()
                 }
@@ -72,15 +73,19 @@ class CityTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //  met dans une variable le pays de la cell selectionné
         nameCountry = arrayCountry[indexPath.row]
         performSegue(withIdentifier: "segueToCountry", sender: nil)
-        print(nameCountry)
+        
     }
     
+    //MARK: - Prepare
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
+        
+        // envoi le nom selectionné à l'ecran suivant
         if segue.identifier == "segueToCountry" {
-           let vcDestination = segue.destination as? CityViewController
+            let vcDestination = segue.destination as? CityViewController
             vcDestination?.city = nameCountry
         }
     }
