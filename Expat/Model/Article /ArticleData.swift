@@ -25,32 +25,13 @@ struct ArticleElement: Decodable {
     let title: String
     let publishedDate: String?
     let link: String?
-    let excerpt, summary: String?
+    let excerpt, summary, rights: String?
     let media: String?
     
     enum CodingKeys: String, CodingKey {
         case title
         case publishedDate = "published_date"
         case link
-        case excerpt, summary, media
+        case excerpt, summary, media, rights
 }
 }
-
-
-//// MARK: - ArticleElement
-//struct ArticleElement: Decodable {
-//    let title, publishedDate: String?
-//    let link: String?
-//    let excerpt, summary: String?
-//    let rank: Int?
-//    let topic, authors: String?
-//    let media: String?
-//
-//    enum CodingKeys: String, CodingKey {
-//        case title, author
-//        case publishedDate = "published_date"
-//        case link
-//        case excerpt, summary, rank, topic, authors, media
-//
-//    }
-//}

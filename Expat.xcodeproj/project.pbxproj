@@ -28,6 +28,7 @@
 		4DE77834287E11C30073753F /* ArticleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE77833287E11C30073753F /* ArticleTableViewController.swift */; };
 		4DE77837287EB4390073753F /* ArticlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE77835287EB4390073753F /* ArticlesTableViewCell.swift */; };
 		4DE77838287EB4390073753F /* ArticlesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DE77836287EB4390073753F /* ArticlesTableViewCell.xib */; };
+		4DE7785E2885E2650073753F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE7785D2885E2650073753F /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE7785E2885E2650073753F /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +194,9 @@
 			dependencies = (
 			);
 			name = Expat;
+			packageProductDependencies = (
+				4DE7785D2885E2650073753F /* SDWebImage */,
+			);
 			productName = Expat;
 			productReference = 4D544F6B283CDEE400F9BEFE /* Expat.app */;
 			productType = "com.apple.product-type.application";
@@ -220,6 +225,9 @@
 				Base,
 			);
 			mainGroup = 4D544F62283CDEE400F9BEFE;
+			packageReferences = (
+				4DE7785C2885E2650073753F /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 4D544F6C283CDEE400F9BEFE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -484,6 +492,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4DE7785C2885E2650073753F /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4DE7785D2885E2650073753F /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DE7785C2885E2650073753F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		4D544F77283CDEE400F9BEFE /* Expat.xcdatamodeld */ = {

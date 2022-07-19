@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yhk-sT-Oqv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -82,7 +82,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="edS-st-iLK" kind="relationship" relationship="viewControllers" id="ZOa-tX-uq6"/>
-                        <segue destination="dUc-lZ-Rqo" kind="relationship" relationship="viewControllers" id="reV-gj-8n9"/>
+                        <segue destination="yhk-sT-Oqv" kind="relationship" relationship="viewControllers" id="clf-YC-cec"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kwu-hD-sKG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -142,23 +142,6 @@
             <point key="canvasLocation" x="-118" y="-126"/>
         </scene>
         <!--News-->
-        <scene sceneID="sS7-Rb-6Y9">
-            <objects>
-                <navigationController id="dUc-lZ-Rqo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="News" image="newspaper" catalog="system" id="yvD-Kv-TAS"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SSi-6d-qGT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="yhk-sT-Oqv" kind="relationship" relationship="rootViewController" id="ciz-SJ-1JP"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dce-Am-4Ks" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1014" y="572"/>
-        </scene>
-        <!--News-->
         <scene sceneID="n3v-yX-hPz">
             <objects>
                 <tableViewController id="yhk-sT-Oqv" customClass="ArticleTableViewController" customModule="Expat" customModuleProvider="target" sceneMemberID="viewController">
@@ -181,6 +164,7 @@
                             <outlet property="delegate" destination="yhk-sT-Oqv" id="EbN-iW-V4k"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="News" image="newspaper" catalog="system" id="icU-XW-pum"/>
                     <navigationItem key="navigationItem" title="News" largeTitleDisplayMode="always" id="gET-7k-J0n"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Frw-J0-W0q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

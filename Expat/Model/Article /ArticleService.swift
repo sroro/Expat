@@ -12,7 +12,7 @@ final class ArticleService {
     // step 1: creation of the request, currency allows to choose the exchange currency
     func getArticle(callback: @escaping (Result<Article, Error>) -> Void) {
         
-        guard let articleUrl = URL(string: "https://api.newscatcherapi.com/v2/search?lang=fr&sort_by=date&page_size=10&q=espagne")
+        guard let articleUrl = URL(string: "https://api.newscatcherapi.com/v2/search?lang=fr&sort_by=date&page_size=10&q=malte")
         else { return }
         
         var request = URLRequest(url: articleUrl)

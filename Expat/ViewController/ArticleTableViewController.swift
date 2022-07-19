@@ -13,7 +13,6 @@ class ArticleTableViewController: UITableViewController {
     var arrayTitle = [String]()
     var array = [ArticleElement]()
     
-    var test = ["rodolphe","sabrina","yaseen","saîda"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,10 +50,6 @@ class ArticleTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return arrayTitle.count
-    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows

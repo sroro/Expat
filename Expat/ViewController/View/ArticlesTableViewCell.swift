@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 
 class ArticlesTableViewCell: UITableViewCell {
     
@@ -16,7 +16,6 @@ class ArticlesTableViewCell: UITableViewCell {
     @IBOutlet weak var dateArticle: UILabel!
     @IBOutlet weak var textArticle: UITextView!
     @IBOutlet weak var imageArticle: UIImageView!
-    @IBOutlet weak var urlButton: UIButton!
     @IBOutlet weak var linkArticle: UILabel!
     
     override func awakeFromNib() {
@@ -34,14 +33,13 @@ class ArticlesTableViewCell: UITableViewCell {
     
     var article : ArticleElement? {
         
-       
-        
         didSet{
-            guard let url = URL(string: article?.media ?? "") else { return }
+          
+            guard let url = URL(string: article?.media ?? "https://img.freepik.com/free-vector/news-background-breaking-news-vector-infographic-with-news-theme-map-world-vector-illustration_433751-25.jpg?t=st=1658170277~exp=1658170877~hmac=ed63d5e1749fc6f6fd2ef04275256325a31c2729d4cab787945881853ac427d9&w=1800") else { return }
             
-            imageArticle.image = UIImage(data: u)
+            imageArticle.sd_setImage(with: url)
             titleArticle.text = article?.title
-            linkArticle.text = article?.link
+            linkArticle.text = article?.rights
             dateArticle.text = article?.publishedDate
             textArticle.text = article?.summary
             
