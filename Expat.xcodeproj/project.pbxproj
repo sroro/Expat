@@ -12,6 +12,8 @@
 		4D07C8E02858ADA80014BBB6 /* ListCountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D07C8DF2858ADA80014BBB6 /* ListCountryService.swift */; };
 		4D10BE342873392200249CAD /* ArticleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D10BE332873392200249CAD /* ArticleData.swift */; };
 		4D10BE3A28733C4600249CAD /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D10BE3928733C4600249CAD /* ArticleService.swift */; };
+		4D11F8CF288ACAC200278DC2 /* WebcamsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11F8CE288ACAC200278DC2 /* WebcamsData.swift */; };
+		4D11F8D1288ACAD700278DC2 /* WebcamsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D11F8D0288ACAD700278DC2 /* WebcamsService.swift */; };
 		4D496A3D28527FC7000541AC /* CityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D496A3C28527FC7000541AC /* CityService.swift */; };
 		4D544F6F283CDEE400F9BEFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D544F6E283CDEE400F9BEFE /* AppDelegate.swift */; };
 		4D544F71283CDEE400F9BEFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D544F70283CDEE400F9BEFE /* SceneDelegate.swift */; };
@@ -25,10 +27,13 @@
 		4DAD31FD284655D600FA27EF /* ExchangeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD31FC284655D600FA27EF /* ExchangeData.swift */; };
 		4DAD31FF284655E100FA27EF /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD31FE284655E100FA27EF /* WeatherData.swift */; };
 		4DAD32012848C8D500FA27EF /* ExchangeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD32002848C8D500FA27EF /* ExchangeService.swift */; };
+		4DE569EF288B594400B64C39 /* WebcamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE569ED288B594400B64C39 /* WebcamTableViewCell.swift */; };
+		4DE569F0288B594400B64C39 /* WebcamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DE569EE288B594400B64C39 /* WebcamTableViewCell.xib */; };
+		4DE569F2288B5C2300B64C39 /* WebcamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE569F1288B5C2300B64C39 /* WebcamTableViewController.swift */; };
 		4DE77834287E11C30073753F /* ArticleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE77833287E11C30073753F /* ArticleTableViewController.swift */; };
 		4DE77837287EB4390073753F /* ArticlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE77835287EB4390073753F /* ArticlesTableViewCell.swift */; };
 		4DE77838287EB4390073753F /* ArticlesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DE77836287EB4390073753F /* ArticlesTableViewCell.xib */; };
-		4DE7785E2885E2650073753F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE7785D2885E2650073753F /* SDWebImage */; };
+		4DE7786128874AA20073753F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE7786028874AA20073753F /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,8 @@
 		4D07C8DF2858ADA80014BBB6 /* ListCountryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCountryService.swift; sourceTree = "<group>"; };
 		4D10BE332873392200249CAD /* ArticleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleData.swift; sourceTree = "<group>"; };
 		4D10BE3928733C4600249CAD /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
+		4D11F8CE288ACAC200278DC2 /* WebcamsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebcamsData.swift; sourceTree = "<group>"; };
+		4D11F8D0288ACAD700278DC2 /* WebcamsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebcamsService.swift; sourceTree = "<group>"; };
 		4D496A3C28527FC7000541AC /* CityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityService.swift; sourceTree = "<group>"; };
 		4D544F6B283CDEE400F9BEFE /* Expat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D544F6E283CDEE400F9BEFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +59,9 @@
 		4DAD31FC284655D600FA27EF /* ExchangeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeData.swift; sourceTree = "<group>"; };
 		4DAD31FE284655E100FA27EF /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		4DAD32002848C8D500FA27EF /* ExchangeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeService.swift; sourceTree = "<group>"; };
+		4DE569ED288B594400B64C39 /* WebcamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebcamTableViewCell.swift; sourceTree = "<group>"; };
+		4DE569EE288B594400B64C39 /* WebcamTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebcamTableViewCell.xib; sourceTree = "<group>"; };
+		4DE569F1288B5C2300B64C39 /* WebcamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebcamTableViewController.swift; sourceTree = "<group>"; };
 		4DE77833287E11C30073753F /* ArticleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewController.swift; sourceTree = "<group>"; };
 		4DE77835287EB4390073753F /* ArticlesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewCell.swift; sourceTree = "<group>"; };
 		4DE77836287EB4390073753F /* ArticlesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticlesTableViewCell.xib; sourceTree = "<group>"; };
@@ -62,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DE7785E2885E2650073753F /* SDWebImage in Frameworks */,
+				4DE7786128874AA20073753F /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +86,15 @@
 				4D10BE3928733C4600249CAD /* ArticleService.swift */,
 			);
 			path = "Article ";
+			sourceTree = "<group>";
+		};
+		4D11F8CD288ACAAA00278DC2 /* Webcams */ = {
+			isa = PBXGroup;
+			children = (
+				4D11F8CE288ACAC200278DC2 /* WebcamsData.swift */,
+				4D11F8D0288ACAD700278DC2 /* WebcamsService.swift */,
+			);
+			path = Webcams;
 			sourceTree = "<group>";
 		};
 		4D544F62283CDEE400F9BEFE = {
@@ -109,6 +128,7 @@
 		4D544F85283CDEF600F9BEFE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4D11F8CD288ACAAA00278DC2 /* Webcams */,
 				4D8862752862366F0035C08E /* Weather */,
 				4D886274286236600035C08E /* Exchange */,
 				4D9287302842755100E6DD3B /* Country */,
@@ -121,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				4D544F89283CDF4200F9BEFE /* View */,
+				4DE569F1288B5C2300B64C39 /* WebcamTableViewController.swift */,
 				4D928727283F7B0A00E6DD3B /* CityViewController.swift */,
 				4DE77833287E11C30073753F /* ArticleTableViewController.swift */,
 				4D04677C2843F67800DFBEA4 /* CityTableViewController.swift */,
@@ -145,6 +166,8 @@
 				4D544F74283CDEE400F9BEFE /* Main.storyboard */,
 				4DE77835287EB4390073753F /* ArticlesTableViewCell.swift */,
 				4DE77836287EB4390073753F /* ArticlesTableViewCell.xib */,
+				4DE569ED288B594400B64C39 /* WebcamTableViewCell.swift */,
+				4DE569EE288B594400B64C39 /* WebcamTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,7 +218,7 @@
 			);
 			name = Expat;
 			packageProductDependencies = (
-				4DE7785D2885E2650073753F /* SDWebImage */,
+				4DE7786028874AA20073753F /* SDWebImage */,
 			);
 			productName = Expat;
 			productReference = 4D544F6B283CDEE400F9BEFE /* Expat.app */;
@@ -227,6 +250,7 @@
 			mainGroup = 4D544F62283CDEE400F9BEFE;
 			packageReferences = (
 				4DE7785C2885E2650073753F /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				4DE7785F28874AA20073753F /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 4D544F6C283CDEE400F9BEFE /* Products */;
 			projectDirPath = "";
@@ -242,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE569F0288B594400B64C39 /* WebcamTableViewCell.xib in Resources */,
 				4DE77838287EB4390073753F /* ArticlesTableViewCell.xib in Resources */,
 				4D544F7E283CDEE400F9BEFE /* LaunchScreen.storyboard in Resources */,
 				4D544F7B283CDEE400F9BEFE /* Assets.xcassets in Resources */,
@@ -262,12 +287,16 @@
 				4D496A3D28527FC7000541AC /* CityService.swift in Sources */,
 				4D10BE3A28733C4600249CAD /* ArticleService.swift in Sources */,
 				4D07C8DE2858AD190014BBB6 /* ListCountryData.swift in Sources */,
+				4D11F8CF288ACAC200278DC2 /* WebcamsData.swift in Sources */,
+				4DE569EF288B594400B64C39 /* WebcamTableViewCell.swift in Sources */,
 				4DAD31FB2846417D00FA27EF /* DataCity.swift in Sources */,
 				4D544F6F283CDEE400F9BEFE /* AppDelegate.swift in Sources */,
 				4D544F71283CDEE400F9BEFE /* SceneDelegate.swift in Sources */,
 				4D04677D2843F67800DFBEA4 /* CityTableViewController.swift in Sources */,
+				4DE569F2288B5C2300B64C39 /* WebcamTableViewController.swift in Sources */,
 				4DE77837287EB4390073753F /* ArticlesTableViewCell.swift in Sources */,
 				4D88627728647AB30035C08E /* WeatherService.swift in Sources */,
+				4D11F8D1288ACAD700278DC2 /* WebcamsService.swift in Sources */,
 				4D928728283F7B0A00E6DD3B /* CityViewController.swift in Sources */,
 				4DAD31FD284655D600FA27EF /* ExchangeData.swift in Sources */,
 				4DAD32012848C8D500FA27EF /* ExchangeService.swift in Sources */,
@@ -502,12 +531,20 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		4DE7785F28874AA20073753F /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4DE7785D2885E2650073753F /* SDWebImage */ = {
+		4DE7786028874AA20073753F /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4DE7785C2885E2650073753F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			package = 4DE7785F28874AA20073753F /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */

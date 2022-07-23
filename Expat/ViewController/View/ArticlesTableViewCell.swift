@@ -34,7 +34,9 @@ class ArticlesTableViewCell: UITableViewCell {
     var article : ArticleElement? {
         
         didSet{
-          
+            
+            // REVOIR DEBALLAGE
+            
             guard let url = URL(string: article?.media ?? "https://img.freepik.com/free-vector/news-background-breaking-news-vector-infographic-with-news-theme-map-world-vector-illustration_433751-25.jpg?t=st=1658170277~exp=1658170877~hmac=ed63d5e1749fc6f6fd2ef04275256325a31c2729d4cab787945881853ac427d9&w=1800") else { return }
             
             imageArticle.sd_setImage(with: url)

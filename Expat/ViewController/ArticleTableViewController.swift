@@ -8,27 +8,32 @@
 import UIKit
 
 class ArticleTableViewController: UITableViewController {
-    
+
     var article = ArticleService()
     var arrayTitle = [String]()
-    var array = [ArticleElement]()
-    
+    var arrayElement = [ArticleElement]()
+    var keyword = UserDefaults.standard.value(forKey: "nameCountry")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         
-        receiveArticle()
-                tableView.register(UINib(nibName: "ArticlesTableViewCell", bundle: nil), forCellReuseIdentifier: "articleCell")
-        tableView.reloadData()
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        receiveArticle()
+        tableView.register(UINib(nibName: "ArticlesTableViewCell", bundle: nil), forCellReuseIdentifier: "articleCell")
+        tableView.reloadData()
+  
+    }
     
     // MARK: - Methods
     
     
     func receiveArticle() {
         
-        article.getArticle { [weak self] resultat in
+        article.getArticle(keyword: keyword as! String) { [weak self] resultat in
             switch resultat {
             case.failure(_):
                 print("error")
@@ -36,9 +41,11 @@ class ArticleTableViewController: UITableViewController {
             case.success(let article):
                 DispatchQueue.main.async {
                     for data in article.articles {
+                        //  add title of data in an array for numberOfRowInSections
+                        // add all date in arrayElement for use in tableView
                         self?.arrayTitle.append(data.title)
-                        self?.array.append(data)
-                   
+                        self?.arrayElement.append(data)
+                        
                     }
                     self?.tableView.reloadData()
                 }
@@ -58,8 +65,8 @@ class ArticleTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-   guard let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath) as? ArticlesTableViewCell else { return UITableViewCell() }
-        let arrayElements = array[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath) as? ArticlesTableViewCell else { return UITableViewCell() }
+        let arrayElements = arrayElement[indexPath.row]
         cell.article = arrayElements
         return cell
     }

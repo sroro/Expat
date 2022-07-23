@@ -14,7 +14,7 @@ class CityTableViewController: UITableViewController {
     var listCountry = ListOfCountry()
     var arrayCountry = [String]()
     var nameCountry = String()
-    
+
     // MARK: - ViewLife cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +75,12 @@ class CityTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //  met dans une variable le pays de la cell selectionné
         nameCountry = arrayCountry[indexPath.row]
+
+        
+        //userDefault:
+        
+        UserDefaults.standard.set(nameCountry, forKey: "nameCountry")
+        
         performSegue(withIdentifier: "segueToCountry", sender: nil)
         
     }

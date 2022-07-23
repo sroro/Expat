@@ -21,4 +21,5 @@ struct Data: Decodable {
     let status, title, currency, studio, devise: String
     let repas, cafe, transport, cinema: String
     let essence, textBank, textCity: String
+    let image: String
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01j-tk-zjL">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -131,7 +131,7 @@
                             <outlet property="delegate" destination="Qg7-dZ-KxW" id="SwC-cK-MJi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Pays" id="qch-KZ-Ke9"/>
+                    <navigationItem key="navigationItem" title="Pays" largeTitleDisplayMode="always" id="qch-KZ-Ke9"/>
                     <connections>
                         <outlet property="tableView" destination="l23-GY-s4r" id="fM8-rp-FTe"/>
                         <segue destination="q0t-nC-6dm" kind="show" identifier="segueToCountry" id="ssd-Lq-Jpb"/>
@@ -140,6 +140,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wsA-Rf-Ui8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-118" y="-126"/>
+        </scene>
+        <!--Webcam Table View Controller-->
+        <scene sceneID="EpK-vL-nYM">
+            <objects>
+                <tableViewController id="01j-tk-zjL" customClass="WebcamTableViewController" customModule="Expat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="rA4-OA-EpY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="QOX-dS-RVE">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QOX-dS-RVE" id="8cW-cA-XzL">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="01j-tk-zjL" id="6V1-0q-XQ2"/>
+                            <outlet property="delegate" destination="01j-tk-zjL" id="SZk-kM-M9t"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RR3-rz-AFx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1418" y="603"/>
         </scene>
         <!--News-->
         <scene sceneID="n3v-yX-hPz">
@@ -456,8 +484,8 @@
             <objects>
                 <navigationController id="edS-st-iLK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Liste Pays" image="list.dash" catalog="system" id="x9x-zb-awx"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XgJ-EF-Mqq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="XgJ-EF-Mqq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

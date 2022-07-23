@@ -26,6 +26,7 @@ final class ListOfCountry {
     
     
     // step 1: creation of the request, currency allows to choose the exchange currency
+    
     func getList(callback: @escaping (Result<ListCountry, Error>) -> Void) {
         guard let cityUrl = URL(string: "https://svqfd01f.directus.app/collections")
         else { return }

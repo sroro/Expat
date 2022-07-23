@@ -1,22 +1,26 @@
+//
+//  WebcamsService.swift
+//  Expat
+//
+//  Created by Rodolphe Schnetzer on 22/07/2022.
+//
+
 import Foundation
 
-enum Errors: Error {
-    case noData, noResponse, undecodable
-}
 
-final class ArticleService {
+final class WebcamsService {
     
     
     // MARK: - Methods
     
     // step 1: creation of the request, currency allows to choose the exchange currency
-    func getArticle(keyword:String, callback: @escaping (Result<Article,Error>) -> Void) {
+    func getWebcams( callback: @escaping (Result<Webcams,Error>) -> Void) {
         
-        guard let articleUrl = URL(string: "https://api.newscatcherapi.com/v2/search?lang=fr&sort_by=date&page_size=10&q=\(keyword)")
+        guard let articleUrl = URL(string: "https://api.windy.com/api/webcams/v2/list/country=FR/orderby=popularity/category=city,building?show=webcams:player,image")
         else { return }
         
         var request = URLRequest(url: articleUrl)
-        request.setValue("HOuvKGWFpvqPicSANNKUVZ59Dte1d0U32jQg2X9qVy4", forHTTPHeaderField: "x-api-key")
+        request.setValue("GSsJ5fj5Jgi9rZuyUekmYDQWPrJHiUvS", forHTTPHeaderField: "x-windy-key")
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
@@ -29,7 +33,7 @@ final class ArticleService {
                 return
             }
             
-            guard let responseJSON = try? JSONDecoder().decode(Article.self, from: data) else { // responseJSON.rates
+            guard let responseJSON = try? JSONDecoder().decode(Webcams.self, from: data) else { // responseJSON.rates
                         callback(.failure(NetworkErrorss.undecodable))
                         return
                 }

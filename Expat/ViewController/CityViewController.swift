@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CityViewController: UIViewController {
     
@@ -66,6 +67,8 @@ class CityViewController: UIViewController {
             case.success(let resultOk):
                 DispatchQueue.main.async {
                     
+                    guard let urlImage = URL(string: resultOk.data[0].image) else { return }
+                    
                     self?.cityTitle.text = resultOk.data[0].title
                     self?.nameCurrency.text = resultOk.data[0].currency
                     self?.priceStudio.text = resultOk.data[0].studio
@@ -76,6 +79,7 @@ class CityViewController: UIViewController {
                     self?.princeEssence.text = resultOk.data[0].essence
                     self?.textBank.text = resultOk.data[0].textBank
                     self?.textTopCity.text = resultOk.data[0].textCity
+                    self?.imageCity.sd_setImage(with: urlImage)
              
                 }
                 self!.monnaie = resultOk.data[0].devise
