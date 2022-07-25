@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01j-tk-zjL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -82,7 +82,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="edS-st-iLK" kind="relationship" relationship="viewControllers" id="ZOa-tX-uq6"/>
-                        <segue destination="yhk-sT-Oqv" kind="relationship" relationship="viewControllers" id="clf-YC-cec"/>
+                        <segue destination="TKw-2p-AtX" kind="relationship" relationship="viewControllers" id="ZZu-kD-MTb"/>
+                        <segue destination="X6l-vN-uIc" kind="relationship" relationship="viewControllers" id="Q28-Rx-TPB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kwu-hD-sKG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -141,12 +142,29 @@
             </objects>
             <point key="canvasLocation" x="-118" y="-126"/>
         </scene>
-        <!--Webcam Table View Controller-->
+        <!--Live-->
+        <scene sceneID="N56-Hu-Xna">
+            <objects>
+                <navigationController id="X6l-vN-uIc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Live" image="camera.fill" catalog="system" id="cTR-O8-N2O"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ob5-xw-6DM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="01j-tk-zjL" kind="relationship" relationship="rootViewController" id="Mam-1W-s1m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ceg-96-JSq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2838" y="814"/>
+        </scene>
+        <!--Live Webcams-->
         <scene sceneID="EpK-vL-nYM">
             <objects>
                 <tableViewController id="01j-tk-zjL" customClass="WebcamTableViewController" customModule="Expat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="rA4-OA-EpY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -164,10 +182,29 @@
                             <outlet property="delegate" destination="01j-tk-zjL" id="SZk-kM-M9t"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Webcams" image="camera.fill" catalog="system" id="jGu-tW-kdu"/>
+                    <navigationItem key="navigationItem" title="Live Webcams" largeTitleDisplayMode="always" id="pv9-j5-8g9"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RR3-rz-AFx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1418" y="603"/>
+            <point key="canvasLocation" x="-1894" y="814"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="2y0-bf-8tn">
+            <objects>
+                <navigationController id="TKw-2p-AtX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News" image="newspaper" catalog="system" id="pOP-rM-U2w"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="hwX-I6-b8U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yhk-sT-Oqv" kind="relationship" relationship="rootViewController" id="ABP-i2-BV3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8JI-RN-WB4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-451" y="814"/>
         </scene>
         <!--News-->
         <scene sceneID="n3v-yX-hPz">
@@ -197,7 +234,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Frw-J0-W0q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-119" y="588"/>
+            <point key="canvasLocation" x="607" y="814"/>
         </scene>
         <!--City View Controller-->
         <scene sceneID="dN0-UB-Yjq">
@@ -477,7 +514,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQp-7k-NzX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="250"/>
+            <point key="canvasLocation" x="2014" y="231"/>
         </scene>
         <!--Liste Pays-->
         <scene sceneID="DOp-KJ-MJv">
@@ -498,6 +535,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="dubai.1574221" width="2000" height="1445"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>

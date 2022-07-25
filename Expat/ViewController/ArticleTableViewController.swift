@@ -33,7 +33,7 @@ class ArticleTableViewController: UITableViewController {
     
     func receiveArticle() {
         
-        article.getArticle(keyword: keyword as! String) { [weak self] resultat in
+        article.getArticle(keyword: "france" as! String) { [weak self] resultat in
             switch resultat {
             case.failure(_):
                 print("error")
@@ -45,14 +45,11 @@ class ArticleTableViewController: UITableViewController {
                         // add all date in arrayElement for use in tableView
                         self?.arrayTitle.append(data.title)
                         self?.arrayElement.append(data)
-                        
                     }
                     self?.tableView.reloadData()
                 }
-                
             }
-        }
-        
+        }        
     }
     
     // MARK: - Table view data source

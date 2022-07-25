@@ -8,10 +8,18 @@
 import UIKit
 import SDWebImage
 
+protocol WebcamTableViewCellDelegate: AnyObject {
+    
+    func liveButton()
+    
+}
+
 class WebcamTableViewCell: UITableViewCell {
     
     @IBOutlet weak var placeTitle: UILabel!
     @IBOutlet weak var imagePlace: UIImageView!
+    @IBOutlet weak var button: UIButton!
+    weak var delegate: WebcamTableViewCellDelegate?
     
     var url = String()
     
@@ -27,20 +35,22 @@ class WebcamTableViewCell: UITableViewCell {
     }
     
     
-    var webcam : Webcam? {
+    var webcamInformations : Webcam? {
         didSet{
             
             // REVOIR DEBALLAGE
             
-            guard let urlImage = URL(string: webcam?.image.current.preview ?? "") else { return }
-            placeTitle.text = webcam?.title
+            guard let urlImage = URL(string: webcamInformations?.image.current.preview ?? "") else { return }
+            placeTitle.text = webcamInformations?.title
             imagePlace.sd_setImage(with: urlImage)
           
         }
     }
     
         
-    @IBAction func liveButton(_ sender: Any) {
+    @IBAction func liveButton() {
+        
+        delegate?.liveButton()
        
         if let url = URL(string: "www.essentioil.fr") {
                     UIApplication.shared.open(url)
