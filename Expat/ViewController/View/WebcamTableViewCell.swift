@@ -8,9 +8,9 @@
 import UIKit
 import SDWebImage
 
-protocol WebcamTableViewCellDelegate: AnyObject {
+protocol WebcamProtocol {
     
-    func liveButton()
+    func buttonLive()
     
 }
 
@@ -18,15 +18,9 @@ class WebcamTableViewCell: UITableViewCell {
     
     @IBOutlet weak var placeTitle: UILabel!
     @IBOutlet weak var imagePlace: UIImageView!
-    @IBOutlet weak var button: UIButton!
-    weak var delegate: WebcamTableViewCellDelegate?
+    var delegate: WebcamProtocol?
     
     var url = String()
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -35,6 +29,23 @@ class WebcamTableViewCell: UITableViewCell {
     }
     
     
+    
+    @IBAction func buttonLIve() {
+        
+        delegate?.buttonLive()
+        
+        var webcamUrl : Webcam? {
+            didSet{
+                if let url = URL(string: webcamUrl?.player.day.embed ?? "") {
+                    UIApplication.shared.open(url)
+                }
+            }
+//            if let url = URL(string: url) {
+//                UIApplication.shared.open(url)
+//
+//            }
+        }
+    }
     var webcamInformations : Webcam? {
         didSet{
             
@@ -43,21 +54,11 @@ class WebcamTableViewCell: UITableViewCell {
             guard let urlImage = URL(string: webcamInformations?.image.current.preview ?? "") else { return }
             placeTitle.text = webcamInformations?.title
             imagePlace.sd_setImage(with: urlImage)
-          
+            
         }
     }
     
-        
-    @IBAction func liveButton() {
-        
-        delegate?.liveButton()
-       
-        if let url = URL(string: "www.essentioil.fr") {
-                    UIApplication.shared.open(url)
-        
-        
-        }
     
-}
+    
     
 }

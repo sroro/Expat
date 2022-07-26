@@ -22,7 +22,7 @@
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="tinted" title="Play Live"/>
                         <connections>
-                            <action selector="liveButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5Ix-lg-Uvk"/>
+                            <action selector="buttonLIve" destination="KGk-i7-Jjw" eventType="touchUpInside" id="if8-V9-Bi5"/>
                         </connections>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VmH-nI-oM6">
@@ -45,7 +45,7 @@
                 <outlet property="imagePlace" destination="VmH-nI-oM6" id="osY-Ih-yJV"/>
                 <outlet property="placeTitle" destination="TO5-UK-INC" id="jbO-WT-hnG"/>
             </connections>
-            <point key="canvasLocation" x="215.21739130434784" y="148.32589285714286"/>
+            <point key="canvasLocation" x="214.49275362318843" y="148.32589285714286"/>
         </tableViewCell>
     </objects>
 </document>
