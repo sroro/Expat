@@ -10,7 +10,7 @@ import SDWebImage
 
 protocol WebcamProtocol {
     
-    func buttonLive()
+    func buttonLive(with url: String)
     
 }
 
@@ -19,8 +19,8 @@ class WebcamTableViewCell: UITableViewCell {
     @IBOutlet weak var placeTitle: UILabel!
     @IBOutlet weak var imagePlace: UIImageView!
     var delegate: WebcamProtocol?
+    var url : String = "https://webcams.windy.com/webcams/public/embed/player/1511477795/day"
     
-    var url = String()
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -32,20 +32,10 @@ class WebcamTableViewCell: UITableViewCell {
     
     @IBAction func buttonLIve() {
         
-        delegate?.buttonLive()
+        delegate?.buttonLive(with: url)
         
-        var webcamUrl : Webcam? {
-            didSet{
-                if let url = URL(string: webcamUrl?.player.day.embed ?? "") {
-                    UIApplication.shared.open(url)
-                }
-            }
-//            if let url = URL(string: url) {
-//                UIApplication.shared.open(url)
-//
-//            }
-        }
     }
+    
     var webcamInformations : Webcam? {
         didSet{
             

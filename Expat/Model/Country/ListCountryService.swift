@@ -11,7 +11,7 @@ enum NetworkErrorss: Error {
     case noData, noResponse, undecodable
 }
 
-final class ListOfCountry {
+final class ListCountryService {
     
     // MARK: - properties
     

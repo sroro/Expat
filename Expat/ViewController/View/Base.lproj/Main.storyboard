@@ -98,7 +98,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="ITv-hW-bbS">
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="2ss-j1-3mx">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -134,6 +134,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Pays" largeTitleDisplayMode="always" id="qch-KZ-Ke9"/>
                     <connections>
+                        <outlet property="searchBar" destination="2ss-j1-3mx" id="gA9-bG-gdc"/>
                         <outlet property="tableView" destination="l23-GY-s4r" id="fM8-rp-FTe"/>
                         <segue destination="q0t-nC-6dm" kind="show" identifier="segueToCountry" id="ssd-Lq-Jpb"/>
                     </connections>

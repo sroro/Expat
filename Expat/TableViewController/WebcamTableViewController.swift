@@ -13,8 +13,9 @@ class WebcamTableViewController: UITableViewController {
     var webcam = WebcamsService()
     var numberWebcams = [String]()
     var arrayWebcams = [Webcam]()
-    let searchController = UISearchController(searchResultsController: nil)
     
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "WebcamTableViewCell", bundle: nil), forCellReuseIdentifier: "webcamCell")
@@ -27,7 +28,7 @@ class WebcamTableViewController: UITableViewController {
     
     func receiveWebcam() {
         
-        webcam.getWebcams { [weak self] resultat in
+        webcam.getWebcams(countryCode: "FR") { [weak self] resultat in
             switch resultat {
             case.failure(_):
                 print("error")
@@ -64,7 +65,6 @@ class WebcamTableViewController: UITableViewController {
         //remppli les info
         cell.webcamInformations = array
         
-        
         cell.delegate = self
         
         return cell
@@ -77,21 +77,15 @@ class WebcamTableViewController: UITableViewController {
 }
 
 extension WebcamTableViewController: WebcamProtocol  {
-    func buttonLive() {
-        
-        if let url = URL(string: "https://webcams.windy.com/webcams/public/embed/player/1511477795/day") {
+    func buttonLive(with url: String) {
+        if let url = URL(string: url) {
             UIApplication.shared.open(url)
         }
     }
     
+   
+    
   
 }
 
-extension WebcamTableViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        guard let text = searchController.searchBar.text else {
-            return
-        }
-    }
-   
-}
+

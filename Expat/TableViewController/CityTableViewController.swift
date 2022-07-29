@@ -7,21 +7,30 @@
 
 import UIKit
 
-class CityTableViewController: UITableViewController {
+class CityTableViewController: UITableViewController,UISearchBarDelegate {
+    
     
     //    MARK: - Properties
     
-    var listCountry = ListOfCountry()
+    @IBOutlet weak var searchBar: UISearchBar!
+    var listCountry = ListCountryService()
     var arrayCountry = [String]()
     var nameCountry = String()
-
+    var filteredCountry = [String]() //tableau des elements filter search bar
+    
+    
+    
     // MARK: - ViewLife cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchBar.delegate = self
+        
         receiveCountry()
+        
+        filteredCountry = arrayCountry
         tableView.reloadData()
-      
+        
     }
     
     
@@ -37,10 +46,10 @@ class CityTableViewController: UITableViewController {
                     
                     // boucle pour utiliser les infos et les mettres dans un array
                     for data in resultat.data {
-                        
                         self?.arrayCountry.append(data.collection)
-                    
                     }
+                    
+                    self?.filteredCountry = self?.arrayCountry ?? [""]
                     self?.tableView.reloadData()
                 }
             }
@@ -57,16 +66,21 @@ class CityTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return arrayCountry.count
+        return filteredCountry.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath)
-        let title = arrayCountry[indexPath.row]
-        cell.textLabel?.text = title
+        //
+        let country = filteredCountry[indexPath.row]
+        
+        
+        cell.textLabel?.text = country
         return cell
+        
     }
+    
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
@@ -74,13 +88,7 @@ class CityTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //  met dans une variable le pays de la cell selectionné
-        nameCountry = arrayCountry[indexPath.row]
-
-        
-        //userDefault:
-        
-        UserDefaults.standard.set(nameCountry, forKey: "nameCountry")
-        
+        nameCountry = filteredCountry[indexPath.row]
         performSegue(withIdentifier: "segueToCountry", sender: nil)
         
     }
@@ -96,4 +104,31 @@ class CityTableViewController: UITableViewController {
         }
     }
     
+    //     MARK: - SearchBar
+    
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    var isFiltered: Bool {
+        return searchController.isActive
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredCountry = []
+        
+        if searchText == "" {
+            filteredCountry = arrayCountry
+        } else {
+            for countries in arrayCountry {
+                if countries.lowercased().contains(searchText.lowercased()){
+                    filteredCountry.append(countries)
+                }
+            }
+        }
+        self.tableView.reloadData()
+        
+        
+    }
+    
+    
 }
+

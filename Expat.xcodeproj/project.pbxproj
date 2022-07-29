@@ -118,6 +118,7 @@
 			children = (
 				4D544F88283CDF2A00F9BEFE /* Support */,
 				4D544F86283CDEFF00F9BEFE /* ViewController */,
+				4DC916F128901BFB0096B3E4 /* TableViewController */,
 				4D544F85283CDEF600F9BEFE /* Model */,
 				4D544F7F283CDEE400F9BEFE /* Info.plist */,
 				4D544F77283CDEE400F9BEFE /* Expat.xcdatamodeld */,
@@ -141,10 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				4D544F89283CDF4200F9BEFE /* View */,
-				4DE569F1288B5C2300B64C39 /* WebcamTableViewController.swift */,
 				4D928727283F7B0A00E6DD3B /* CityViewController.swift */,
-				4DE77833287E11C30073753F /* ArticleTableViewController.swift */,
-				4D04677C2843F67800DFBEA4 /* CityTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -199,6 +197,16 @@
 				4D07C8DF2858ADA80014BBB6 /* ListCountryService.swift */,
 			);
 			path = Country;
+			sourceTree = "<group>";
+		};
+		4DC916F128901BFB0096B3E4 /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4DE569F1288B5C2300B64C39 /* WebcamTableViewController.swift */,
+				4DE77833287E11C30073753F /* ArticleTableViewController.swift */,
+				4D04677C2843F67800DFBEA4 /* CityTableViewController.swift */,
+			);
+			path = TableViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
