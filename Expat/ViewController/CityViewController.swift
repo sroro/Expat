@@ -14,15 +14,12 @@ class CityViewController: UIViewController {
     @IBOutlet weak var cityTitle: UILabel!
     @IBOutlet weak var imageCity: UIImageView!
     
-    
     @IBOutlet weak var nameCurrency: UILabel!
     @IBOutlet weak var exchangeCurrency: UILabel!
     
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var imageWeather: UIImageView!
     @IBOutlet weak var temperature: UILabel!
-    
-    
     
     @IBOutlet weak var priceStudio: UILabel!
     @IBOutlet weak var priceRepas: UILabel!
@@ -45,12 +42,17 @@ class CityViewController: UIViewController {
     var change = ExchangeService()
     var weather = WeatherService()
     var city = String()
+    var codeCountry = String()
+    
+    var userDefaults = UserDefaults.standard
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         receiveInfosCountry()
         getWeather()
+        
     }
     
     
@@ -65,7 +67,7 @@ class CityViewController: UIViewController {
                 print("error")
                 
             case.success(let resultOk):
-                DispatchQueue.main.async {
+                DispatchQueue.main.async { [self] in
                     
                     guard let urlImage = URL(string: resultOk.data[0].image) else { return }
                     
@@ -80,12 +82,15 @@ class CityViewController: UIViewController {
                     self?.textBank.text = resultOk.data[0].textBank
                     self?.textTopCity.text = resultOk.data[0].textCity
                     self?.imageCity.sd_setImage(with: urlImage)
-             
+                    
+                    self?.codeCountry = resultOk.data[0].code ?? "FR"
+                    self?.userDefaults.set(self?.codeCountry, forKey: "codeCountry")
                 }
+               
                 self!.monnaie = resultOk.data[0].devise
                 
                 // appel currency apres receiveInfo pour recevoir la devise
-                self?.currency()
+//                self?.currency()  EN PAUSE CAR PLUS DE CREDIT SUR l'API
             }
             
         }

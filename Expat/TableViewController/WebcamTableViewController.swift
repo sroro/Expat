@@ -13,22 +13,37 @@ class WebcamTableViewController: UITableViewController {
     var webcam = WebcamsService()
     var numberWebcams = [String]()
     var arrayWebcams = [Webcam]()
-    
-    
+    var countryCode = String()
    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "WebcamTableViewCell", bundle: nil), forCellReuseIdentifier: "webcamCell")
-        tableView.reloadData()
-        receiveWebcam()
+        
         SDImageCache.shared.clearDisk()
         SDImageCache.shared.clearMemory()
+        // recevoir le code du pays pour le mettre dans l'URL api webcam
+        
+        
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        guard let codeCountry = UserDefaults.standard.string(forKey: "codeCountry") else {return}
+        countryCode = codeCountry
+        receiveWebcam()
+        tableView.reloadData()
+        print(countryCode)
+      
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+       
+    }
     
     func receiveWebcam() {
         
-        webcam.getWebcams(countryCode: "FR") { [weak self] resultat in
+        webcam.getWebcams(countryCode: countryCode) { [weak self] resultat in
             switch resultat {
             case.failure(_):
                 print("error")
@@ -39,14 +54,14 @@ class WebcamTableViewController: UITableViewController {
                     for data in result.result.webcams {
                         self?.arrayWebcams.append(data)
                         self?.numberWebcams.append(data.title)
+                        self?.tableView.reloadData()
                     }
                     
-                    self?.tableView.reloadData()
                 }
-                
             }
         }
     }
+    
     
     // MARK: - Table view data source
     
@@ -66,14 +81,13 @@ class WebcamTableViewController: UITableViewController {
         cell.webcamInformations = array
         
         cell.delegate = self
-        
         return cell
     }
+    
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 280
     }
-    
 }
 
 extension WebcamTableViewController: WebcamProtocol  {
@@ -83,9 +97,7 @@ extension WebcamTableViewController: WebcamProtocol  {
         }
     }
     
-   
     
-  
 }
 
 

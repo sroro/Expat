@@ -16,11 +16,10 @@ class ArticleTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        
         
     }
     
+
     override func viewWillAppear(_ animated: Bool) {
         receiveArticle()
         tableView.register(UINib(nibName: "ArticlesTableViewCell", bundle: nil), forCellReuseIdentifier: "articleCell")
@@ -33,7 +32,7 @@ class ArticleTableViewController: UITableViewController {
     
     func receiveArticle() {
         
-        article.getArticle(keyword: "france" as! String) { [weak self] resultat in
+        article.getArticle(keyword: "france") { [weak self] resultat in
             switch resultat {
             case.failure(_):
                 print("error")

@@ -22,4 +22,5 @@ struct Data: Decodable {
     let repas, cafe, transport, cinema: String
     let essence, textBank, textCity: String
     let image: String
+    let code, continent: String?
 }

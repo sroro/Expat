@@ -24,6 +24,7 @@ struct Datum: Decodable {
 // MARK: - Meta
 struct Meta: Decodable {
     let collection: String
+    let icon, note: String?
 
 }
 

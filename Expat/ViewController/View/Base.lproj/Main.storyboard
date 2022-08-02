@@ -104,26 +104,28 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="titleCell" id="Pvu-KT-CWg">
-                                <rect key="frame" x="0.0" y="88.666666030883789" width="414" height="22.333333969116211"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="titleCell" textLabel="1So-Bd-b61" detailTextLabel="Xdl-O7-ZWG" style="IBUITableViewCellStyleSubtitle" id="Pvu-KT-CWg">
+                                <rect key="frame" x="0.0" y="88.666666030883789" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pvu-KT-CWg" id="Dvw-rc-4yS">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="22.333333969116211"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fcc-nk-Gen">
-                                            <rect key="frame" x="20" y="11" width="374" height="0.33333333333333393"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1So-Bd-b61">
+                                            <rect key="frame" x="20" y="4" width="37" height="21.666666666666668"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xdl-O7-ZWG">
+                                            <rect key="frame" x="20" y="25.666666666666668" width="35" height="15.666666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Fcc-nk-Gen" firstAttribute="leading" secondItem="Dvw-rc-4yS" secondAttribute="leadingMargin" id="7Sf-4J-Y5a"/>
-                                        <constraint firstItem="Fcc-nk-Gen" firstAttribute="top" secondItem="Dvw-rc-4yS" secondAttribute="topMargin" id="Lfg-AZ-whe"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Fcc-nk-Gen" secondAttribute="bottom" id="eA8-gI-zyO"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Fcc-nk-Gen" secondAttribute="trailing" id="pii-Jz-I7n"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
