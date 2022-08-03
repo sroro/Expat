@@ -14,12 +14,11 @@ class WebcamTableViewController: UITableViewController {
     var numberWebcams = [String]()
     var arrayWebcams = [Webcam]()
     var countryCode = String()
-   
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "WebcamTableViewCell", bundle: nil), forCellReuseIdentifier: "webcamCell")
-        
         SDImageCache.shared.clearDisk()
         SDImageCache.shared.clearMemory()
         // recevoir le code du pays pour le mettre dans l'URL api webcam
@@ -32,17 +31,16 @@ class WebcamTableViewController: UITableViewController {
         guard let codeCountry = UserDefaults.standard.string(forKey: "codeCountry") else {return}
         countryCode = codeCountry
         receiveWebcam()
-        tableView.reloadData()
-        print(countryCode)
-      
+
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-       
+    override func viewWillDisappear(_ animated: Bool) {
+        //vide tableau pour avoir une tableview vide a chaque appel. Sinon ajoute chaque webcam a la suite
+        arrayWebcams.removeAll()
+        numberWebcams.removeAll()
     }
     
     func receiveWebcam() {
-        
         webcam.getWebcams(countryCode: countryCode) { [weak self] resultat in
             switch resultat {
             case.failure(_):
@@ -50,18 +48,17 @@ class WebcamTableViewController: UITableViewController {
             case.success(let result):
                 
                 DispatchQueue.main.async {
-                    
                     for data in result.result.webcams {
                         self?.arrayWebcams.append(data)
                         self?.numberWebcams.append(data.title)
                         self?.tableView.reloadData()
                     }
-                    
                 }
             }
         }
     }
     
+   
     
     // MARK: - Table view data source
     

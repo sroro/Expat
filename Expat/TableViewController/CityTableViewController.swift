@@ -15,10 +15,11 @@ class CityTableViewController: UITableViewController,UISearchBarDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     var listCountry = ListCountryService()
     var arrayCountry = [String]()
-    var nameCountry = String()
+    var arrayContinent = [String]()
+    var nameCountrySelected = String()
     var filteredCountry = [String]() //tableau des elements pour filter search bar
-    var codeCountry = [String]()
     
+    var userDefaults = UserDefaults.standard
     
     // MARK: - ViewLife cycle
     override func viewDidLoad() {
@@ -47,7 +48,7 @@ class CityTableViewController: UITableViewController,UISearchBarDelegate {
                     // boucle pour utiliser les infos et les mettres dans un array
                     for data in resultat.data {
                         self?.arrayCountry.append(data.collection)
-                        self?.codeCountry.append(data.meta.note ?? "")
+                        self?.arrayContinent.append(data.meta.note ?? "")
                     }
                     
                     self?.filteredCountry = self?.arrayCountry ?? [""] // rempli filtered country pour afficher la liste au lancement
@@ -74,7 +75,7 @@ class CityTableViewController: UITableViewController,UISearchBarDelegate {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath)
         let country = filteredCountry[indexPath.row]
-        let continent = codeCountry[indexPath.row]
+        let continent = arrayContinent[indexPath.row]
         cell.detailTextLabel?.text = continent
         cell.textLabel?.text = country
         return cell
@@ -88,7 +89,8 @@ class CityTableViewController: UITableViewController,UISearchBarDelegate {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //  met dans une variable le pays de la cell selectionné
-        nameCountry = filteredCountry[indexPath.row]
+        nameCountrySelected = filteredCountry[indexPath.row]
+        userDefaults.set(nameCountrySelected, forKey: "nameCountrySelected")
         performSegue(withIdentifier: "segueToCountry", sender: nil)
 //        print(codeCountry[indexPath.row])
     }
@@ -101,7 +103,7 @@ class CityTableViewController: UITableViewController,UISearchBarDelegate {
         // envoi le nom selectionné à l'ecran suivant pour l'utiliser dans l'API
         if segue.identifier == "segueToCountry" {
             let vcDestination = segue.destination as? CityViewController
-            vcDestination?.city = nameCountry
+            vcDestination?.city = nameCountrySelected
         }
     }
     
