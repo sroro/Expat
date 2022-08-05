@@ -9,9 +9,12 @@ import UIKit
 import SDWebImage
 
 class CityViewController: UIViewController {
+    // MARK: - View
     
+    @IBOutlet weak var viewCurrency: UIStackView!
+    @IBOutlet weak var viewWeather: UIStackView!
     //    MARK: - Outlets
-    @IBOutlet weak var cityTitle: UILabel!
+    
     @IBOutlet weak var imageCity: UIImageView!
     
     @IBOutlet weak var nameCurrency: UILabel!
@@ -43,13 +46,12 @@ class CityViewController: UIViewController {
     var weather = WeatherService()
     var city = String()
     var codeCountry = String()
-    
     var userDefaults = UserDefaults.standard
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        design()
         receiveInfosCountry()
         getWeather()
         
@@ -64,14 +66,14 @@ class CityViewController: UIViewController {
         infosCountry.getCity(city: city) { [weak self] result in
             switch result {
             case.failure(_):
-                print("error")
+                self?.alertNoCountry()
                 
             case.success(let resultOk):
                 DispatchQueue.main.async { [self] in
                     
                     guard let urlImage = URL(string: resultOk.data[0].image) else { return }
                     
-                    self?.cityTitle.text = resultOk.data[0].title
+                    self?.title = resultOk.data[0].title
                     self?.nameCurrency.text = resultOk.data[0].currency
                     self?.priceStudio.text = resultOk.data[0].studio
                     self?.priceRepas.text = resultOk.data[0].repas
@@ -90,7 +92,7 @@ class CityViewController: UIViewController {
                 self!.monnaie = resultOk.data[0].devise
                 
                 // appel currency apres receiveInfo pour recevoir la devise
-//                self?.currency()  EN PAUSE CAR PLUS DE CREDIT SUR l'API
+                self?.currency()  //EN PAUSE CAR PLUS DE CREDIT SUR l'API
             }
             
         }
@@ -103,7 +105,7 @@ class CityViewController: UIViewController {
             switch resultat {
                 
             case.failure(_):
-                print("error")
+                self?.alertNoCurrency()
             case.success(let result):
                 DispatchQueue.main.async {
                     self?.exchangeCurrency.text = ("1€ = \(result)")
@@ -121,7 +123,7 @@ class CityViewController: UIViewController {
         weather.getWeather(place: city ) { [weak self] resultat in
             switch resultat {
             case.failure(_):
-                print("error")
+                self?.alertNoWeather()
                 
             case.success(let resultOk):
                 DispatchQueue.main.async{
@@ -132,7 +134,17 @@ class CityViewController: UIViewController {
             
         }
     }
-    
+ 
+    func design() {
+        viewWeather.layer.cornerRadius = 10
+        viewWeather.layer.shadowRadius = 10
+        viewWeather.layer.shadowColor = UIColor.black.cgColor
+        viewWeather.layer.shadowOpacity = 0.5
+        viewCurrency.layer.cornerRadius = 10
+        viewCurrency.layer.shadowRadius = 20
+        viewCurrency.layer.shadowColor = UIColor.black.cgColor
+        viewCurrency.layer.shadowOpacity = 0.5
+    }
     
     
     

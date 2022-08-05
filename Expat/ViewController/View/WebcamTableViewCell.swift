@@ -16,11 +16,10 @@ protocol WebcamProtocol {
 
 class WebcamTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var button: UIButton!
     @IBOutlet weak var placeTitle: UILabel!
     @IBOutlet weak var imagePlace: UIImageView!
     var delegate: WebcamProtocol?
-    var url : String = "https://webcams.windy.com/webcams/public/embed/player/1511477795/day"
-    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -29,11 +28,15 @@ class WebcamTableViewCell: UITableViewCell {
     
     
     
-    @IBAction func buttonLIve() {
-        
-        delegate?.buttonLive(with: url)
-        
+    
+    @IBAction func buttonLive(_ sender: Any) {
+        delegate?.buttonLive(with: webcamInformations?.player.day.embed ?? "https://webcams.windy.com/webcams/public/embed/player/1511477795/day")
     }
+    
+   
+    
+       
+    
     
     var webcamInformations : Webcam? {
         didSet{
@@ -44,10 +47,8 @@ class WebcamTableViewCell: UITableViewCell {
             placeTitle.text = webcamInformations?.title
             imagePlace.sd_setImage(with: urlImage)
             
+            
         }
     }
-    
-    
-    
     
 }

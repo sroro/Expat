@@ -21,14 +21,16 @@
 		4D544F79283CDEE400F9BEFE /* Expat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D544F77283CDEE400F9BEFE /* Expat.xcdatamodeld */; };
 		4D544F7B283CDEE400F9BEFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D544F7A283CDEE400F9BEFE /* Assets.xcassets */; };
 		4D544F7E283CDEE400F9BEFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D544F7C283CDEE400F9BEFE /* LaunchScreen.storyboard */; };
+		4D556B40289C715D00234791 /* WebcamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D556B3F289C715D00234791 /* WebcamTableViewCell.xib */; };
 		4D88627728647AB30035C08E /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D88627628647AB30035C08E /* WeatherService.swift */; };
 		4D928728283F7B0A00E6DD3B /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D928727283F7B0A00E6DD3B /* CityViewController.swift */; };
+		4D95C7F8289C92A80051F030 /* Alert+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D95C7F7289C92A80051F030 /* Alert+extension.swift */; };
+		4D9ED148289C6CA000207BA1 /* AccueilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9ED147289C6CA000207BA1 /* AccueilViewController.swift */; };
 		4DAD31FB2846417D00FA27EF /* DataCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD31FA2846417D00FA27EF /* DataCity.swift */; };
 		4DAD31FD284655D600FA27EF /* ExchangeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD31FC284655D600FA27EF /* ExchangeData.swift */; };
 		4DAD31FF284655E100FA27EF /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD31FE284655E100FA27EF /* WeatherData.swift */; };
 		4DAD32012848C8D500FA27EF /* ExchangeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD32002848C8D500FA27EF /* ExchangeService.swift */; };
 		4DE569EF288B594400B64C39 /* WebcamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE569ED288B594400B64C39 /* WebcamTableViewCell.swift */; };
-		4DE569F0288B594400B64C39 /* WebcamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DE569EE288B594400B64C39 /* WebcamTableViewCell.xib */; };
 		4DE569F2288B5C2300B64C39 /* WebcamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE569F1288B5C2300B64C39 /* WebcamTableViewController.swift */; };
 		4DE77834287E11C30073753F /* ArticleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE77833287E11C30073753F /* ArticleTableViewController.swift */; };
 		4DE77837287EB4390073753F /* ArticlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE77835287EB4390073753F /* ArticlesTableViewCell.swift */; };
@@ -53,14 +55,16 @@
 		4D544F7A283CDEE400F9BEFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D544F7D283CDEE400F9BEFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D544F7F283CDEE400F9BEFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D556B3F289C715D00234791 /* WebcamTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebcamTableViewCell.xib; sourceTree = "<group>"; };
 		4D88627628647AB30035C08E /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		4D928727283F7B0A00E6DD3B /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
+		4D95C7F7289C92A80051F030 /* Alert+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+extension.swift"; sourceTree = "<group>"; };
+		4D9ED147289C6CA000207BA1 /* AccueilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccueilViewController.swift; sourceTree = "<group>"; };
 		4DAD31FA2846417D00FA27EF /* DataCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCity.swift; sourceTree = "<group>"; };
 		4DAD31FC284655D600FA27EF /* ExchangeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeData.swift; sourceTree = "<group>"; };
 		4DAD31FE284655E100FA27EF /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		4DAD32002848C8D500FA27EF /* ExchangeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeService.swift; sourceTree = "<group>"; };
 		4DE569ED288B594400B64C39 /* WebcamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebcamTableViewCell.swift; sourceTree = "<group>"; };
-		4DE569EE288B594400B64C39 /* WebcamTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebcamTableViewCell.xib; sourceTree = "<group>"; };
 		4DE569F1288B5C2300B64C39 /* WebcamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebcamTableViewController.swift; sourceTree = "<group>"; };
 		4DE77833287E11C30073753F /* ArticleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewController.swift; sourceTree = "<group>"; };
 		4DE77835287EB4390073753F /* ArticlesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewCell.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 			children = (
 				4D544F89283CDF4200F9BEFE /* View */,
 				4D928727283F7B0A00E6DD3B /* CityViewController.swift */,
+				4D9ED147289C6CA000207BA1 /* AccueilViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 		4D544F88283CDF2A00F9BEFE /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				4D95C7F7289C92A80051F030 /* Alert+extension.swift */,
 				4D544F6E283CDEE400F9BEFE /* AppDelegate.swift */,
 				4D544F70283CDEE400F9BEFE /* SceneDelegate.swift */,
 			);
@@ -164,8 +170,8 @@
 				4D544F74283CDEE400F9BEFE /* Main.storyboard */,
 				4DE77835287EB4390073753F /* ArticlesTableViewCell.swift */,
 				4DE77836287EB4390073753F /* ArticlesTableViewCell.xib */,
+				4D556B3F289C715D00234791 /* WebcamTableViewCell.xib */,
 				4DE569ED288B594400B64C39 /* WebcamTableViewCell.swift */,
-				4DE569EE288B594400B64C39 /* WebcamTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -274,7 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DE569F0288B594400B64C39 /* WebcamTableViewCell.xib in Resources */,
+				4D556B40289C715D00234791 /* WebcamTableViewCell.xib in Resources */,
 				4DE77838287EB4390073753F /* ArticlesTableViewCell.xib in Resources */,
 				4D544F7E283CDEE400F9BEFE /* LaunchScreen.storyboard in Resources */,
 				4D544F7B283CDEE400F9BEFE /* Assets.xcassets in Resources */,
@@ -295,6 +301,7 @@
 				4D496A3D28527FC7000541AC /* CityService.swift in Sources */,
 				4D10BE3A28733C4600249CAD /* ArticleService.swift in Sources */,
 				4D07C8DE2858AD190014BBB6 /* ListCountryData.swift in Sources */,
+				4D95C7F8289C92A80051F030 /* Alert+extension.swift in Sources */,
 				4D11F8CF288ACAC200278DC2 /* WebcamsData.swift in Sources */,
 				4DE569EF288B594400B64C39 /* WebcamTableViewCell.swift in Sources */,
 				4DAD31FB2846417D00FA27EF /* DataCity.swift in Sources */,
@@ -308,6 +315,7 @@
 				4D928728283F7B0A00E6DD3B /* CityViewController.swift in Sources */,
 				4DAD31FD284655D600FA27EF /* ExchangeData.swift in Sources */,
 				4DAD32012848C8D500FA27EF /* ExchangeService.swift in Sources */,
+				4D9ED148289C6CA000207BA1 /* AccueilViewController.swift in Sources */,
 				4D07C8E02858ADA80014BBB6 /* ListCountryService.swift in Sources */,
 				4DE77834287E11C30073753F /* ArticleTableViewController.swift in Sources */,
 			);

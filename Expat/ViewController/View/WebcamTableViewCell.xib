@@ -16,23 +16,25 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="271"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ov6-0U-KiN">
-                        <rect key="frame" x="130" y="225" width="168" height="31"/>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ov6-0U-KiN">
+                        <rect key="frame" x="120" y="220" width="189" height="40"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="tinted" title="Play Live"/>
+                        <color key="backgroundColor" red="0.35815267099999998" green="0.49952653349999998" blue="0.80987197160000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Play Live"/>
                         <connections>
-                            <action selector="buttonLIve" destination="KGk-i7-Jjw" eventType="touchUpInside" id="if8-V9-Bi5"/>
+                            <action selector="buttonLive:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Xdm-sx-P6h"/>
                         </connections>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VmH-nI-oM6">
-                        <rect key="frame" x="66" y="64" width="289" height="143"/>
+                        <rect key="frame" x="20" y="62" width="374" height="145"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="placeTitle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TO5-UK-INC">
                         <rect key="frame" x="35" y="9" width="359" height="53"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -42,6 +44,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" red="0.91972725349999995" green="0.91972725349999995" blue="0.91972725349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <connections>
+                <outlet property="button" destination="ov6-0U-KiN" id="rjy-wT-N2e"/>
                 <outlet property="imagePlace" destination="VmH-nI-oM6" id="osY-Ih-yJV"/>
                 <outlet property="placeTitle" destination="TO5-UK-INC" id="jbO-WT-hnG"/>
             </connections>

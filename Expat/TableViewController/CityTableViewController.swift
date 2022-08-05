@@ -30,7 +30,6 @@ class CityTableViewController: UITableViewController,UISearchBarDelegate {
         filteredCountry = arrayCountry
         tableView.reloadData()
         
-       
     }
     
     
@@ -40,7 +39,7 @@ class CityTableViewController: UITableViewController,UISearchBarDelegate {
         listCountry.getList { resultat in
             switch resultat {
             case.failure(_):
-                print("error")
+                self.alertNoData()
             case.success(let resultat):
                 DispatchQueue.main.async { [weak self] in
                     
@@ -79,7 +78,6 @@ class CityTableViewController: UITableViewController,UISearchBarDelegate {
         cell.detailTextLabel?.text = continent
         cell.textLabel?.text = country
         return cell
-        
     }
     
     
@@ -131,5 +129,6 @@ class CityTableViewController: UITableViewController,UISearchBarDelegate {
         }
         self.tableView.reloadData()
     }
+    
 }
 

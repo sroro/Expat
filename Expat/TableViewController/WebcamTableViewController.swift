@@ -44,7 +44,7 @@ class WebcamTableViewController: UITableViewController {
         webcam.getWebcams(countryCode: countryCode) { [weak self] resultat in
             switch resultat {
             case.failure(_):
-                print("error")
+                self?.alertNoData()
             case.success(let result):
                 
                 DispatchQueue.main.async {
@@ -53,6 +53,7 @@ class WebcamTableViewController: UITableViewController {
                         self?.numberWebcams.append(data.title)
                         self?.tableView.reloadData()
                     }
+                    
                 }
             }
         }
@@ -66,7 +67,9 @@ class WebcamTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+      
         return numberWebcams.count
+    
     }
     
     

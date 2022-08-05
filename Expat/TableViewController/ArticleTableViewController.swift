@@ -47,7 +47,7 @@ class ArticleTableViewController: UITableViewController {
         article.getArticle(keyword: nameCountrys) { [weak self] resultat in
             switch resultat {
             case.failure(_):
-                print("error")
+                self?.alertNoData()
                 
             case.success(let article):
                 DispatchQueue.main.async {
