@@ -36,19 +36,19 @@ final class ExchangeService {
             
             // check if data or error = nil else noData
                 guard let data = data,error == nil  else {
-                    callback(.failure(NetworkError.noData))
+                    callback(.failure(Errors.noData))
                     return
                 }
                 
                 // check if the status code = 200 = OK else noResponse
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                    callback(.failure(NetworkError.noResponse))
+                    callback(.failure(Errors.noResponse))
                     return
                 }
                 // we decode the response received in JSON else error undecodable
              guard let responseJSON = try? JSONDecoder().decode(Exchange.self, from: data),
                     let currency = responseJSON.rates[devise] else { // responseJSON.rates
-                        callback(.failure(NetworkError.undecodable))
+                        callback(.failure(Errors.undecodable))
                         return
                 }
             callback(.success(currency))

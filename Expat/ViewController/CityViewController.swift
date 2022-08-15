@@ -88,7 +88,7 @@ class CityViewController: UIViewController {
                     self?.codeCountry = resultOk.data[0].code ?? "FR"
                     self?.userDefaults.set(self?.codeCountry, forKey: "codeCountry")
                 }
-               
+                
                 self!.monnaie = resultOk.data[0].devise
                 
                 // appel currency apres receiveInfo pour recevoir la devise
@@ -134,7 +134,7 @@ class CityViewController: UIViewController {
             
         }
     }
- 
+    
     func design() {
         viewWeather.layer.cornerRadius = 10
         viewWeather.layer.shadowRadius = 10
@@ -145,7 +145,5 @@ class CityViewController: UIViewController {
         viewCurrency.layer.shadowColor = UIColor.black.cgColor
         viewCurrency.layer.shadowOpacity = 0.5
     }
-    
-    
     
 }

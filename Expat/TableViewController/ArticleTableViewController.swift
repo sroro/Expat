@@ -47,18 +47,22 @@ class ArticleTableViewController: UITableViewController {
         article.getArticle(keyword: nameCountrys) { [weak self] resultat in
             switch resultat {
             case.failure(_):
-                self?.alertNoData()
-                
+//                self?.alertNoData()
+                print("error")
             case.success(let article):
+                
                 DispatchQueue.main.async {
                     for data in article.articles {
                         //  add title of data in an array for numberOfRowInSections
                         // add all date in arrayElement for use in tableView
                         self?.arrayTitleNews.append(data.title)
                         self?.arrayElementNews.append(data)
+                        self?.tableView.reloadData()
+                        
                     }
-                    self?.tableView.reloadData()
+                   
                 }
+    
             }
         }        
     }

@@ -7,10 +7,6 @@
 
 import Foundation
 
-enum Errorss: Error {
-    case noData, noResponse, undecodable
-}
-
 final class CityService {
     
     // MARK: - properties
@@ -37,18 +33,18 @@ final class CityService {
             
             // check if data or error = nil else noData
                 guard let data = data,error == nil  else {
-                    callback(.failure(Errorss.noData))
+                    callback(.failure(Errors.noData))
                     return
                 }
                 
                 // check if the status code = 200 = OK else noResponse
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                    callback(.failure(Errorss.noResponse))
+                    callback(.failure(Errors.noResponse))
                     return
                 }
                 // we decode the response received in JSON else error undecodable
             guard let responseJSON = try? JSONDecoder().decode(Welcome.self, from: data) else {
-                        callback(.failure(Errorss.undecodable))
+                        callback(.failure(Errors.undecodable))
                         return
                 }
                 callback(.success(responseJSON))

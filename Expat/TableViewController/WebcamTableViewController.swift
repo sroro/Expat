@@ -21,8 +21,7 @@ class WebcamTableViewController: UITableViewController {
         tableView.register(UINib(nibName: "WebcamTableViewCell", bundle: nil), forCellReuseIdentifier: "webcamCell")
         SDImageCache.shared.clearDisk()
         SDImageCache.shared.clearMemory()
-        // recevoir le code du pays pour le mettre dans l'URL api webcam
-        
+    
         
     }
     
@@ -66,8 +65,7 @@ class WebcamTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-      
+       // #warning Incomplete implementation, return the number of rows
         return numberWebcams.count
     
     }

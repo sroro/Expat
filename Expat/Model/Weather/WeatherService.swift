@@ -23,23 +23,23 @@ final class WeatherService {
     // MARK: - Methods
     
     ///Récupère conditions météorologique
-    func getWeather(place: String, callback: @escaping (Result<Weather, Error> ) -> Void) {
+ func getWeather(place: String, callback: @escaping (Result<Weather, Error> ) -> Void) {
         guard let weatherUrl = URL(string: "https://api.openweathermap.org/data/2.5/weather?appid=314876d286f00bb721932b105fbb601b&units=metric&lang=fr&q=\(place)") else {return}
         
         task?.cancel()
         task = session.dataTask(with: weatherUrl, completionHandler: { (data, response, error) in
                 
                 guard let data = data, error == nil else {
-                    callback(.failure(NetworkError.noData))
+                    callback(.failure(Errors.noData))
                     return
                 }
             
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                    callback(.failure(NetworkError.noResponse))
+                    callback(.failure(Errors.noResponse))
                     return
                 }
                 guard let responseJSON = try? JSONDecoder().decode(Weather.self, from: data) else {
-                    callback(.failure(NetworkError.undecodable))
+                    callback(.failure(Errors.undecodable))
                     return
                 }
                 callback(.success(responseJSON))

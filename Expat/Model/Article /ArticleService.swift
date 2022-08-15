@@ -16,7 +16,7 @@ final class ArticleService {
         else { return }
         
         var request = URLRequest(url: articleUrl)
-        request.setValue("HOuvKGWFpvqPicSANNKUVZ59Dte1d0U32jQg2X9qVy4", forHTTPHeaderField: "x-api-key")
+        request.setValue("u-_x0wncBhZrQxVSCiUHJ0IyEb8pVn_82B_L2jLAlIA", forHTTPHeaderField: "x-api-key")
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
@@ -25,12 +25,12 @@ final class ArticleService {
             }
             
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                callback(.failure(NetworkErrorss.noResponse))
+                callback(.failure(Errors.noResponse))
                 return
             }
             
             guard let responseJSON = try? JSONDecoder().decode(Article.self, from: data) else { // responseJSON.rates
-                        callback(.failure(NetworkErrorss.undecodable))
+                        callback(.failure(Errors.undecodable))
                         return
                 }
             callback(.success(responseJSON))

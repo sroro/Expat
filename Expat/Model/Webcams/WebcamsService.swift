@@ -16,7 +16,7 @@ final class WebcamsService {
     // step 1: creation of the request, currency allows to choose the exchange currency
     func getWebcams(countryCode:String, callback: @escaping (Result<Webcams,Error>) -> Void) {
         
-        guard let articleUrl = URL(string: "https://api.windy.com/api/webcams/v2/list/country=\(countryCode)/orderby=popularity/category=city/limit=20?show=webcams:player,image")
+        guard let articleUrl = URL(string: "https://api.windy.com/api/webcams/v2/list/country=\(countryCode)/orderby=popularity//limit=20?show=webcams:player,image")
         else { return }
         
         var request = URLRequest(url: articleUrl)
