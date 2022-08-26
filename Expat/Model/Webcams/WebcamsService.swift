@@ -10,7 +10,16 @@ import Foundation
 
 final class WebcamsService {
     
+    // MARK: - properties
     
+    private let session : URLSession
+    private var task: URLSessionDataTask?
+    
+    // MARK: - initializer
+    
+    init(session:URLSession = URLSession(configuration: .default)){
+        self.session = session
+    }
     // MARK: - Methods
     
     // step 1: creation of the request, currency allows to choose the exchange currency
@@ -22,7 +31,9 @@ final class WebcamsService {
         var request = URLRequest(url: articleUrl)
         request.setValue("GSsJ5fj5Jgi9rZuyUekmYDQWPrJHiUvS", forHTTPHeaderField: "x-windy-key")
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        task?.cancel()
+        
+        task = session.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
                 callback(.failure(Errors.noData))
                 return
@@ -41,7 +52,7 @@ final class WebcamsService {
             
             
         }
-        task.resume()
+        task?.resume()
         
     }
     
