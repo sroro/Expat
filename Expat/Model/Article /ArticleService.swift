@@ -4,8 +4,6 @@ enum Errors: Error {
     case noData, noResponse, undecodable
 }
 
-
-
 final class ArticleService {
     
     // MARK: - properties
@@ -46,7 +44,6 @@ final class ArticleService {
                         return
                 }
             callback(.success(responseJSON))
-            
             
         }
         task?.resume()
