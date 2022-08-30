@@ -1,0 +1,75 @@
+
+{
+    "status": "OK",
+    "result": {
+        "offset": 0,
+        "limit": 1,
+        "total": 45,
+        "webcams": [
+            {
+                "id": "1658331508",
+                "status": "active",
+                "title": "Toulouse",
+                "image": {
+                    "current": {
+                        "icon": "https://images-webcams.windy.com/08/1658331508/current/icon/1658331508.jpg",
+                        "thumbnail": "https://images-webcams.windy.com/08/1658331508/current/thumbnail/1658331508.jpg",
+                        "preview": "https://images-webcams.windy.com/08/1658331508/current/preview/1658331508.jpg",
+                        "toenail": "https://images-webcams.windy.com/08/1658331508/current/thumbnail/1658331508.jpg"
+                    },
+                    "sizes": {
+                        "icon": {
+                            "width": 48,
+                            "height": 48
+                        },
+                        "thumbnail": {
+                            "width": 200,
+                            "height": 112
+                        },
+                        "preview": {
+                            "width": 400,
+                            "height": 224
+                        },
+                        "toenail": {
+                            "width": 200,
+                            "height": 112
+                        }
+                    },
+                    "daylight": {
+                        "icon": "https://images-webcams.windy.com/08/1658331508/daylight/icon/1658331508.jpg",
+                        "thumbnail": "https://images-webcams.windy.com/08/1658331508/daylight/thumbnail/1658331508.jpg",
+                        "preview": "https://images-webcams.windy.com/08/1658331508/daylight/preview/1658331508.jpg",
+                        "toenail": "https://images-webcams.windy.com/08/1658331508/daylight/thumbnail/1658331508.jpg"
+                    },
+                    "update": 1661753987
+                },
+                "player": {
+                    "live": {
+                        "available": false,
+                        "embed": ""
+                    },
+                    "day": {
+                        "available": false,
+                        "link": "https://www.windy.com/webcams/1658331508",
+                        "embed": "https://webcams.windy.com/webcams/public/embed/player/1658331508/day"
+                    },
+                    "month": {
+                        "available": true,
+                        "link": "https://www.windy.com/webcams/1658331508",
+                        "embed": "https://webcams.windy.com/webcams/public/embed/player/1658331508/month"
+                    },
+                    "year": {
+                        "available": false,
+                        "link": "https://www.windy.com/webcams/1658331508",
+                        "embed": "https://webcams.windy.com/webcams/public/embed/player/1658331508/year"
+                    },
+                    "lifetime": {
+                        "available": false,
+                        "link": "https://www.windy.com/webcams/1658331508",
+                        "embed": "https://webcams.windy.com/webcams/public/embed/player/1658331508/lifetime"
+                    }
+                }
+            }
+        ]
+    }
+}

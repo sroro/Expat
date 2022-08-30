@@ -1,0 +1,47 @@
+
+{
+    "coord": {
+        "lon": -3.7396,
+        "lat": 5.2038
+    },
+    "weather": [
+        {
+            "id": 803,
+            "main": "Clouds",
+            "description": "nuageux",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 25.99,
+        "feels_like": 25.99,
+        "temp_min": 25.99,
+        "temp_max": 25.99,
+        "pressure": 1015,
+        "humidity": 79,
+        "sea_level": 1015,
+        "grnd_level": 1014
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 3.29,
+        "deg": 261,
+        "gust": 4.24
+    },
+    "clouds": {
+        "all": 81
+    },
+    "dt": 1661851503,
+    "sys": {
+        "type": 1,
+        "id": 1162,
+        "country": "CI",
+        "sunrise": 1661839751,
+        "sunset": 1661883753
+    },
+    "timezone": 0,
+    "id": 2288873,
+    "name": "France",
+    "cod": 200
+}
