@@ -1,22 +1,56 @@
-
 {
-            "title": "Comment recycler les matériaux du BTP ?",
-            "author": "Batiweb",
-            "published_date": "2022-08-29 22:00:00",
+    "status": "ok",
+    "total_hits": 10000,
+    "page": 1,
+    "total_pages": 10000,
+    "page_size": 1,
+    "articles": [
+        {
+            "title": "Quinté+: PRIX DES HAUTS-DE-FRANCE",
+            "author": "Par Guillaume Luyckx",
+            "published_date": "2022-08-31 00:00:00",
             "published_date_precision": "timezone unknown",
-            "link": "http://www.batiweb.com/actualites/developpement-durable/comment-recycler-les-materiaux-du-btp-40764",
-            "clean_url": "batiweb.com",
-            "excerpt": "Le recyclage des matériaux du BTP permet de préserver les ressources naturelles et de réduire l'impact environnemental du secteur en leur donnant une seconde vie.",
-            "summary": "Le secteur du BTP est le plus gros producteur de déchets en France. Il a donc un rôle essentiel à jouer dans le développement durable, en s'inscrivant dans une logique d'économie circulaire. Pour ce faire le recyclage des matériaux du BTP est plus important que jamais. Chaque année en France, plus de 320 millions de tonnes de déchets sont produits, dont les trois quarts sont générés par les activités du BTP. Les activités de démolition, de réhabilitation et de construction sont particulièrement concernées.",
-            "rights": "batiweb.com",
-            "rank": 151158,
-            "topic": "news",
+            "link": "https://www.equidia.fr/courses/2022-08-31/R1/C1",
+            "clean_url": "equidia.fr",
+            "excerpt": "Distance : 1600 M · Discipline : Plat · Partants : 16 · Course : Classe 2 · Piste : Herbe · Corde : Corde à gauche · Tracking disponible · Allocations : 50 000 €",
+            "summary": "L'analyse de la course\n\nAvec seulement sept courses au compteur, Royal Robbins (7) est le moins expérimenté du lot. Dirigé vers les handicaps au printemps, ce protégé de Jérôme Reynier a rapidement montré sa compétitivité à ce niveau. Doté d'une petite marge de progression, il a certainement les moyens de surmonter sa récente pénalisation de trois kilos. Ommeel (10) s'est fort bien comporté lors de ses deux courses de remise en route et ne devrait pas être contrarié par la distance plus courte. Même s'il a été déclaré non-partant il y a peu, il sera logiquement appuyé au betting.",
+            "rights": "equidia.fr",
+            "rank": 306649,
+            "topic": "entertainment",
             "country": "FR",
             "language": "fr",
-            "authors": "Batiweb",
-            "media": "https://img.batiweb.com/repo-images/article/40764/btp.jpg",
+            "authors": "Equidia,Par Guillaume Luyckx",
+            "media": "https://media.equidia.fr/unsafe/fit-in/0x0/https://api.equidia.fr/api/public/media/original/default-galop-plat",
             "is_opinion": false,
-            "twitter_account": "@batiweb",
-            "_score": 1.7119267,
-            "_id": "dca25b264ef12e1e299245aaf5d20539"
-        },
+            "twitter_account": null,
+            "_score": 2.1508946,
+            "_id": "fac96ff77791e9fb99614dc085bc7bb3"
+        }
+    ],
+    "user_input": {
+        "q": "France",
+        "search_in": [
+            "title_summary_fr"
+        ],
+        "lang": [
+            "fr"
+        ],
+        "not_lang": null,
+        "countries": [
+            "FR"
+        ],
+        "not_countries": null,
+        "from": "2022-08-23 00:00:00",
+        "to": null,
+        "ranked_only": "True",
+        "from_rank": null,
+        "to_rank": null,
+        "sort_by": "date",
+        "page": 1,
+        "size": 1,
+        "sources": null,
+        "not_sources": null,
+        "topic": null,
+        "published_date_precision": null
+    }
+}

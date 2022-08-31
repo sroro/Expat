@@ -14,7 +14,7 @@ class TestFakeResponseData {
     static let responseKO = HTTPURLResponse(url: URL(string:"https://google.com")!, statusCode: 500, httpVersion: nil, headerFields: [:])
     
     class DataError: Error { }
-    let error = DataError()
+    static let error = DataError()
     
     static var articleCorrectData: Data {
         let bundle = Bundle(for: TestFakeResponseData.self)
