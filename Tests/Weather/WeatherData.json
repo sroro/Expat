@@ -1,4 +1,3 @@
-
 {
     "coord": {
         "lon": -3.7396,
@@ -6,9 +5,9 @@
     },
     "weather": [
         {
-            "id": 803,
+            "id": 804,
             "main": "Clouds",
-            "description": "nuageux",
+            "description": "couvert",
             "icon": "04d"
         }
     ],
@@ -18,27 +17,27 @@
         "feels_like": 25.99,
         "temp_min": 25.99,
         "temp_max": 25.99,
-        "pressure": 1015,
-        "humidity": 79,
-        "sea_level": 1015,
-        "grnd_level": 1014
+        "pressure": 1012,
+        "humidity": 86,
+        "sea_level": 1012,
+        "grnd_level": 1012
     },
     "visibility": 10000,
     "wind": {
-        "speed": 3.29,
-        "deg": 261,
-        "gust": 4.24
+        "speed": 4.56,
+        "deg": 229,
+        "gust": 8.7
     },
     "clouds": {
-        "all": 81
+        "all": 100
     },
-    "dt": 1661851503,
+    "dt": 1661949817,
     "sys": {
         "type": 1,
         "id": 1162,
         "country": "CI",
-        "sunrise": 1661839751,
-        "sunset": 1661883753
+        "sunrise": 1661926140,
+        "sunset": 1661970127
     },
     "timezone": 0,
     "id": 2288873,
