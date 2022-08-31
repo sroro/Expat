@@ -1,0 +1,23 @@
+
+{
+    "data": [
+        {
+            "id": 1,
+            "status": "published",
+            "title": "🇸🇩 Dubaï",
+            "currency": "Dirhams",
+            "studio": "🏠 Studio = 850 - 1600€",
+            "repas": "🍔 Repas = 9€",
+            "cafe": "☕️ Café = 4€",
+            "transport": "🚈 Transport = 4€",
+            "cinema": "🎬 Cinéma = 10€",
+            "essence": "⛽️ Essence/L = 0,8cts",
+            "textBank": "- Taxation des revenus: 0% -\n    - Taxation des sociétés : 0% à 9%\n    Dès 2023, un impôt sur les sociétés sera mis en place aux émirats.\n    Cet impôt sera de 9% pour les bénéfices supérieurs à 375.000 AED (environ 91.000€).\n    - Les critères pour obtenir son certificat de résidence fiscale:\n    Pour l'obtenir, il faudra rester plus de 183 jours sur le territoire.\n    À partir de ce moment, vous pourrez faire votre demande de certificat de résidence fiscale aux administrations Émiraties.",
+            "textCity": "L’aéroport de Dubaï est un véritable HUB, si vous aimez voyager, vous pourrez le faire très facilement.\n    L’emplacement de Dubaï est idéal pour rejoindre l’Asie ou l’Europe assez rapidement.\n    Avantage indéniable, un vol Paris-Dubaï dure environ 6h45, ce qui est une durée tolérable pour la plupart des expatriés.\n    Dubaï est une ville où le nombre d’activités, de sorties et de restaurants est quasiment illimité.\n    La sécurité et la propreté de Dubaï sont également les avantages qu’offre la ville.",
+            "devise": "AED",
+            "image": "https://geo.img.pmdstatic.net/fit/https.3A.2F.2Fi.2Epmdstatic.2Enet.2Fgeo.2F2022.2F06.2F22.2F704a5ea1-7c56-4e3f-b8e0-5556aab501d1.2Ejpeg/1150x647/background-color/ffffff/quality/70/photos-les-10-attractions-incontournables-de-dubai.jpg",
+            "code": "AE",
+            "continent": "Asie"
+        }
+    ]
+}

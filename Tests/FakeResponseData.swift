@@ -16,6 +16,12 @@ class TestFakeResponseData {
     class DataError: Error { }
     static let error = DataError()
     
+    static var cityCorrectData: Data {
+        let bundle = Bundle(for: TestFakeResponseData.self)
+        let url = bundle.url(forResource: "CityData", withExtension: "json")!
+        return try! Data(contentsOf: url)
+    }
+    
     static var articleCorrectData: Data {
         let bundle = Bundle(for: TestFakeResponseData.self)
         let url = bundle.url(forResource: "Article", withExtension: "json")!

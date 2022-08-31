@@ -23,6 +23,8 @@
 		4D3FE31128BE0EF900AACD9B /* WeatherData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D3FE31028BE0EF900AACD9B /* WeatherData.json */; };
 		4D3FE31428BE0F1F00AACD9B /* WebcamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3FE31328BE0F1F00AACD9B /* WebcamTests.swift */; };
 		4D3FE31628BE0F4500AACD9B /* WebcamData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D3FE31528BE0F4500AACD9B /* WebcamData.json */; };
+		4D3FE31928BF946000AACD9B /* CityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3FE31828BF946000AACD9B /* CityTests.swift */; };
+		4D3FE31D28BF94C800AACD9B /* CityData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D3FE31C28BF94C800AACD9B /* CityData.json */; };
 		4D496A3D28527FC7000541AC /* CityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D496A3C28527FC7000541AC /* CityService.swift */; };
 		4D544F6F283CDEE400F9BEFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D544F6E283CDEE400F9BEFE /* AppDelegate.swift */; };
 		4D544F71283CDEE400F9BEFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D544F70283CDEE400F9BEFE /* SceneDelegate.swift */; };
@@ -75,6 +77,8 @@
 		4D3FE31028BE0EF900AACD9B /* WeatherData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WeatherData.json; sourceTree = "<group>"; };
 		4D3FE31328BE0F1F00AACD9B /* WebcamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebcamTests.swift; sourceTree = "<group>"; };
 		4D3FE31528BE0F4500AACD9B /* WebcamData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WebcamData.json; sourceTree = "<group>"; };
+		4D3FE31828BF946000AACD9B /* CityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTests.swift; sourceTree = "<group>"; };
+		4D3FE31C28BF94C800AACD9B /* CityData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CityData.json; sourceTree = "<group>"; };
 		4D496A3C28527FC7000541AC /* CityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityService.swift; sourceTree = "<group>"; };
 		4D544F6B283CDEE400F9BEFE /* Expat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D544F6E283CDEE400F9BEFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +177,15 @@
 				4D3FE31528BE0F4500AACD9B /* WebcamData.json */,
 			);
 			path = WebcamTests;
+			sourceTree = "<group>";
+		};
+		4D3FE31728BF944000AACD9B /* CityTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D3FE31828BF946000AACD9B /* CityTests.swift */,
+				4D3FE31C28BF94C800AACD9B /* CityData.json */,
+			);
+			path = CityTests;
 			sourceTree = "<group>";
 		};
 		4D544F62283CDEE400F9BEFE = {
@@ -286,6 +299,7 @@
 			children = (
 				4DA6956528AE4FC900D9CA18 /* MockURLProtocol.swift */,
 				4D3FE30428BCD42D00AACD9B /* FakeResponseData.swift */,
+				4D3FE31728BF944000AACD9B /* CityTests */,
 				4D3FE31228BE0F0600AACD9B /* WebcamTests */,
 				4D3FE30D28BE0E9300AACD9B /* Weather */,
 				4D3FE30628BE0DE800AACD9B /* ExchangeTests */,
@@ -404,6 +418,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D3FE31D28BF94C800AACD9B /* CityData.json in Resources */,
 				4D3FE31628BE0F4500AACD9B /* WebcamData.json in Resources */,
 				4D3FE31128BE0EF900AACD9B /* WeatherData.json in Resources */,
 				4D3FE30328BCCE2300AACD9B /* Article.json in Resources */,
@@ -449,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D3FE30828BE0E1600AACD9B /* ExchangeTests.swift in Sources */,
+				4D3FE31928BF946000AACD9B /* CityTests.swift in Sources */,
 				4D3FE2FE28BCBF1A00AACD9B /* ArticleServicesTests.swift in Sources */,
 				4D3FE31428BE0F1F00AACD9B /* WebcamTests.swift in Sources */,
 				4DA6956628AE4FC900D9CA18 /* MockURLProtocol.swift in Sources */,
