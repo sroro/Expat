@@ -25,7 +25,7 @@ final class ArticleService {
         else { return }
         
         var request = URLRequest(url: articleUrl)
-        request.setValue("u-_x0wncBhZrQxVSCiUHJ0IyEb8pVn_82B_L2jLAlIA", forHTTPHeaderField: "x-api-key")
+        request.setValue("mr-tw6Rmlcy5bFm--X2e47pjXQUo7QnTDjYiwPBLTk0", forHTTPHeaderField: "x-api-key")
         
         task?.cancel()
          task = session.dataTask(with: request) { data, response, error in

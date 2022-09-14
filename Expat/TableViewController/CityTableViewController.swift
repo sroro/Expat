@@ -43,7 +43,7 @@ class CityTableViewController: UITableViewController,UISearchBarDelegate {
             case.success(let resultat):
                 DispatchQueue.main.async { [weak self] in
                     
-            
+                    
                     // boucle pour utiliser les infos et les mettres dans un array
                     for data in resultat.data {
                         self?.arrayCountry.append(data.collection)
@@ -90,7 +90,7 @@ class CityTableViewController: UITableViewController,UISearchBarDelegate {
         nameCountrySelected = filteredCountry[indexPath.row]
         userDefaults.set(nameCountrySelected, forKey: "nameCountrySelected")
         performSegue(withIdentifier: "segueToCountry", sender: nil)
-//        print(codeCountry[indexPath.row])
+        //        print(codeCountry[indexPath.row])
     }
     
     
